@@ -1,0 +1,30 @@
+// Light mode variables
+$pink-to-purple: linear-gradient(#eda0c5, #9c7cac);
+$purple-to-pink: linear-gradient(#9c7cac, #eda0c5);
+
+// Dark mode variables
+$black-to-purple: linear-gradient(#202123, #9c7cac);
+$purple-to-black: linear-gradient(#9c7cac, #202123);
+
+* {
+  font-family: 'Jua', sans-serif;
+}
+// className = 'body dark'
+
+/*
+
+<div className="outer">
+  <div className="inner>
+
+<div className="inner>
+*/
+
+// .outer > .inner {
+
+// }
+// body {
+
+//   &.dark {
+
+//   }
+// }
