@@ -8,7 +8,54 @@ $purple-to-black: linear-gradient(#9c7cac, #202123);
 
 * {
   font-family: 'Jua', sans-serif;
+  background-color: #FAFAFA;
+  margin: 0;
+  padding: 0;
 }
+
+.hero-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  color: black;
+  background: $pink-to-purple;
+  &.dark {
+    background: $black-to-purple;
+  }
+}
+
+.white-grid {
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  background-size: 40px 40px;
+  background-color: transparent;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 1px, transparent 1px);
+}
+
+.hero-slant {
+  align-self: flex-end;
+  position: relative;
+  background-color: #FAFAFA;
+  height: 17vh;
+  width: 33vw;
+}
+
+.hero-slant::after {
+  content: '';
+  position: absolute;
+  right: -160px;
+
+  border-width: 80px;
+  border-style: solid;
+  border-left-color: #FAFAFA;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: #FAFAFA;
+}
+
 // className = 'body dark'
 
 /*
