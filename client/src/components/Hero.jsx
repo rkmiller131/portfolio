@@ -10,8 +10,12 @@ export default function Hero() {
         <div className="hero-column hero-left">
           TEST LEFT
         </div>
-        <div className="hero-column hero-right">
-          TEST RIGHT
+        <div className="hero-column">
+          <div className="hero-right">
+            <div className="character-backdrop">
+              <img className="character" src="https://res.cloudinary.com/dnr41r1lq/image/upload/v1691520552/112_wmov4n.png"/>
+            </div>
+          </div>
         </div>
       </div>
       <div className="hero-slant">
