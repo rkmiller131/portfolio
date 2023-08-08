@@ -1,27 +1,29 @@
 // Light mode variables
 $pink-to-purple: linear-gradient(#eda0c5, #9c7cac);
 $purple-to-pink: linear-gradient(#9c7cac, #eda0c5);
+$appleWhite: #FAFAFA;
 
 // Dark mode variables
 $black-to-purple: linear-gradient(#202123, #9c7cac);
 $purple-to-black: linear-gradient(#9c7cac, #202123);
+$charcoal: #202123;
 
 * {
   box-sizing: border-box;
   font-family: 'Jua', sans-serif;
-  background-color: #FAFAFA;
+  background-color: $appleWhite;
   margin: 0;
   padding: 0;
   cursor: url('https://res.cloudinary.com/dnr41r1lq/image/upload/v1691460747/icons8-cursor-64_qbudfa.png'), pointer;
 }
 
-.hero-container {
+.hero-section {
   display: flex;
   position: relative;
   align-items: center;
   width: 100%;
   min-height: 100vh;
-  color: black;
+  color: $charcoal;
   background: $pink-to-purple;
   &.dark {
     background: $black-to-purple;
@@ -39,22 +41,35 @@ $purple-to-black: linear-gradient(#9c7cac, #202123);
     linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 1px, transparent 1px);
 }
 
-.placement {
+.hero-content-container {
+  display: flex;
+  flex-direction: row; //default, but just good to know - one row of two cols
   width: 75%;
-  height: 20vh;
+  height: 50%;
   position: absolute;
-  background-color: white;
-  align-self: center;
+  background-color: $appleWhite;
+  margin-left: 12.5%;
+  @media screen and (max-width: 900px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.hero-column {
+  display: flex;
+  border: 2px solid green;
+  flex-basis: 50%;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-slant {
   align-self: flex-end;
   position: relative;
-  background-color: #FAFAFA;
+  background-color: $appleWhite;
   height: 17vh;
   width: 33vw;
   &.dark {
-    background-color: #202123;
+    background-color: $charcoal;
   }
 }
 
@@ -65,17 +80,25 @@ $purple-to-black: linear-gradient(#9c7cac, #202123);
 
   border-width: 80px;
   border-style: solid;
-  border-left-color: #FAFAFA;
+  border-left-color: $appleWhite;
   border-right-color: transparent;
   border-top-color: transparent;
-  border-bottom-color: #FAFAFA;
+  border-bottom-color: $appleWhite;
 }
 
 .hero-btn-icon {
   background: transparent;
-  color: white;
+  color: $appleWhite;
   font-size: 28px;
   margin-right: 15px;
+  @media screen and (max-width: 900px) {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 14px;
+    margin-right: 8px;
+  }
 }
 
 .hero-btn {
@@ -87,9 +110,22 @@ $purple-to-black: linear-gradient(#9c7cac, #202123);
   border: 4px solid #eda0c5;
   border-radius: 4rem 4rem;
   background-color: #9c7cac;
-  color: white;
+  color: $appleWhite;
   font-size: 28px;
   z-index: 1;
+  @media screen and (max-width: 900px) {
+    height: 4rem;
+    width: 12rem;
+    font-size: 18px;
+    border-radius: 3rem 3rem;
+    border: 3px solid #eda0c5;
+  }
+  @media screen and (max-width: 600px) {
+    height: 3rem;
+    width: 6rem;
+    font-size: 14px;
+    border-radius: 2rem 2rem;
+  }
 }
 
 .hero-btn:hover {
@@ -100,31 +136,31 @@ $purple-to-black: linear-gradient(#9c7cac, #202123);
   background-color: #8c89b6;
 }
 
-@media screen and (max-width: 900px) {
-  .hero-btn-icon {
-    font-size: 18px;
-    margin-right: 10px;
-  }
-  .hero-btn {
-    height: 4rem;
-    width: 12rem;
-    font-size: 18px;
-    border-radius: 3rem 3rem;
-    border: 3px solid #eda0c5;
-  }
-}
-@media screen and (max-width: 600px) {
-  .hero-btn-icon {
-    font-size: 14px;
-    margin-right: 8px;
-  }
-  .hero-btn {
-    height: 3rem;
-    width: 6rem;
-    font-size: 14px;
-    border-radius: 2rem 2rem;
-  }
-}
+// @media screen and (max-width: 900px) { // on materialUi breakpoints, standards for responsive design: 1200, 900, 600
+//   // .hero-btn-icon {
+//   //   font-size: 18px;
+//   //   margin-right: 10px;
+//   // }
+//   // .hero-btn {
+//   //   height: 4rem;
+//   //   width: 12rem;
+//   //   font-size: 18px;
+//   //   border-radius: 3rem 3rem;
+//   //   border: 3px solid #eda0c5;
+//   // }
+// }
+// @media screen and (max-width: 600px) {
+//   .hero-btn-icon {
+//     font-size: 14px;
+//     margin-right: 8px;
+//   }
+//   .hero-btn {
+//     height: 3rem;
+//     width: 6rem;
+//     font-size: 14px;
+//     border-radius: 2rem 2rem;
+//   }
+// }
 // className = 'body dark'
 
 /*
