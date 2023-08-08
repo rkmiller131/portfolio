@@ -1,6 +1,6 @@
 import React from 'react';
 import Hero from './components/Hero.jsx';
-import './styles/styles.scss'
+import './styles/hero.scss'
 
 export default function App() {
   return (

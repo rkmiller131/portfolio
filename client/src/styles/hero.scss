@@ -1,0 +1,263 @@
+// Light mode variables
+$pink-to-purple: linear-gradient(#eda0c5, #9c7cac);
+$purple-to-pink: linear-gradient(#9c7cac, #eda0c5);
+$appleWhite: #FAFAFA;
+$bubble: rgba(7, 0, 0, 0.25);
+
+// Dark mode variables
+$black-to-purple: linear-gradient(#202123, #9c7cac);
+$purple-to-black: linear-gradient(#9c7cac, #202123);
+$charcoal: #202123;
+
+* {
+  box-sizing: border-box;
+  font-family: 'Jua', sans-serif;
+  // background-color: $appleWhite;
+  margin: 0;
+  padding: 0;
+  cursor: url('https://res.cloudinary.com/dnr41r1lq/image/upload/v1691460747/icons8-cursor-64_qbudfa.png'), pointer;
+}
+
+.hero-section {
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  color: $charcoal;
+  background: $pink-to-purple;
+  &.dark {
+    background: $black-to-purple;
+  }
+}
+
+.white-grid {
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  background-size: 40px 40px;
+  background-color: transparent;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 1px, transparent 1px);
+}
+
+.hero-content-container {
+  display: flex;
+  flex-direction: row;
+  width: 75%;
+  height: 50%;
+  position: absolute;
+  margin-left: 12.5%;
+  @media screen and (max-width: 900px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.hero-column {
+  display: flex;
+  border: 2px solid green;
+  flex-basis: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-title,
+.hero-subtitle {
+  font-family: 'Play', sans-serif;
+}
+
+.hero-title {
+  color: $appleWhite;
+  font-size: 72px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #5e253c;
+  @media screen and (max-width: 600px) {
+    font-size: 36px;
+  }
+}
+
+.anim-typewriter {
+  animation: typewriter 2s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes blinkTextCursor {
+  from { border-right-color: #5e253c; }
+  to { border-right-color: transparent; }
+}
+
+.hero-subtitle {
+  color: rgba(250, 250, 250, 0.8);
+  font-size: 28px;
+  letter-spacing: 0.15rem;
+  animation-name: fade-in;
+  animation-duration: 5s;
+  @media screen and (max-width: 600px) {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+@keyframes fade-in{
+  0% { opacity: 0; }
+  60% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.hero-right {
+  display: flex;
+  background-color: $bubble;
+  height: 95%;
+  width: 95%;
+  border-radius: 8%;
+  align-items: center;
+  justify-content: center;
+  .character-backdrop {
+    background-color: #eda0c5;
+    border-radius: 1rem 1rem;
+    height: 45%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: 900px) {
+      width: 60%;
+    }
+    .character {
+      height: 295px;
+      width: 295px;
+      @media screen and (max-width: 900px) {
+        height: 155px;
+        width: 155px;
+      }
+      @media screen and (max-width: 600px) {
+        height: 112px;
+        width: 112px;
+      }
+    }
+  }
+}
+
+.hero-slant {
+  align-self: flex-end;
+  position: relative;
+  background-color: $appleWhite;
+  height: 17vh;
+  width: 33vw;
+  &.dark {
+    background-color: $charcoal;
+  }
+}
+
+.hero-slant::after {
+  content: '';
+  position: absolute;
+  right: -160px;
+
+  border-width: 80px;
+  border-style: solid;
+  border-left-color: $appleWhite;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: $appleWhite;
+}
+
+.hero-btn-icon {
+  background: transparent;
+  color: $appleWhite;
+  font-size: 28px;
+  margin-right: 15px;
+  @media screen and (max-width: 900px) {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 14px;
+    margin-right: 8px;
+  }
+}
+
+.hero-btn {
+  position: absolute;
+  top: 25%;
+  left: 20%;
+  height: 6rem;
+  width: 16rem;
+  border: 4px solid #eda0c5;
+  border-radius: 4rem 4rem;
+  background-color: #9c7cac;
+  color: $appleWhite;
+  font-size: 28px;
+  z-index: 1;
+  @media screen and (max-width: 900px) {
+    height: 4rem;
+    width: 12rem;
+    font-size: 18px;
+    border-radius: 3rem 3rem;
+    border: 3px solid #eda0c5;
+  }
+  @media screen and (max-width: 600px) {
+    height: 3rem;
+    width: 6rem;
+    font-size: 14px;
+    border-radius: 2rem 2rem;
+  }
+}
+
+.hero-btn:hover {
+  background-color: #9b98ca;
+  border: 4px solid #5e253c;
+}
+.hero-btn:active {
+  background-color: #8c89b6;
+}
+
+// @media screen and (max-width: 900px) { // on materialUi breakpoints, standards for responsive design: 1200, 900, 600
+//   // .hero-btn-icon {
+//   //   font-size: 18px;
+//   //   margin-right: 10px;
+//   // }
+//   // .hero-btn {
+//   //   height: 4rem;
+//   //   width: 12rem;
+//   //   font-size: 18px;
+//   //   border-radius: 3rem 3rem;
+//   //   border: 3px solid #eda0c5;
+//   // }
+// }
+// @media screen and (max-width: 600px) {
+//   .hero-btn-icon {
+//     font-size: 14px;
+//     margin-right: 8px;
+//   }
+//   .hero-btn {
+//     height: 3rem;
+//     width: 6rem;
+//     font-size: 14px;
+//     border-radius: 2rem 2rem;
+//   }
+// }
+// className = 'body dark'
+
+/*
+
+<div className="outer">
+  <div className="inner>
+
+<div className="inner>
+*/
+
+// .outer > .inner {
+
+// }
+// body {
+
+//   &.dark {
+
+//   }
+// }
