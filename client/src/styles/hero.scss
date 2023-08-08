@@ -44,11 +44,10 @@ $charcoal: #202123;
 
 .hero-content-container {
   display: flex;
-  flex-direction: row; //default, but just good to know - one row of two cols
+  flex-direction: row;
   width: 75%;
   height: 50%;
   position: absolute;
-  // background-color: transparent;
   margin-left: 12.5%;
   @media screen and (max-width: 900px) {
     flex-direction: column-reverse;
@@ -61,6 +60,53 @@ $charcoal: #202123;
   flex-basis: 50%;
   align-items: center;
   justify-content: center;
+}
+
+.hero-title,
+.hero-subtitle {
+  font-family: 'Play', sans-serif;
+}
+
+.hero-title {
+  color: $appleWhite;
+  font-size: 72px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #5e253c;
+  @media screen and (max-width: 600px) {
+    font-size: 36px;
+  }
+}
+
+.anim-typewriter {
+  animation: typewriter 2s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes blinkTextCursor {
+  from { border-right-color: #5e253c; }
+  to { border-right-color: transparent; }
+}
+
+.hero-subtitle {
+  color: rgba(250, 250, 250, 0.8);
+  font-size: 28px;
+  letter-spacing: 0.15rem;
+  animation-name: fade-in;
+  animation-duration: 5s;
+  @media screen and (max-width: 600px) {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+@keyframes fade-in{
+  0% { opacity: 0; }
+  60% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 .hero-right {
