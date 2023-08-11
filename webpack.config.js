@@ -16,7 +16,7 @@ module.exports = {
       {
         test: /\.?js|jsx$/,
         exclude: /node_modules/,
-        use: { loader: 'babel-loader'}
+        use: { loader: 'babel-loader' }
       },
       {
         test: /\.s[ac]ss$/i,
@@ -27,6 +27,11 @@ module.exports = {
           // Compiles Sass to CSS
           "sass-loader",
         ],
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        type: 'asset/resource',
+        use: { loader: 'file-loader' }
       },
     ]
   }
