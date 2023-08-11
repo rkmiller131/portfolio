@@ -1,6 +1,8 @@
 // Light mode variables
 $pink-to-purple: linear-gradient(#eda0c5, #9c7cac);
 $purple-to-pink: linear-gradient(#9c7cac, #eda0c5);
+$buttonbg: linear-gradient(to right, #eda0c5, #9c7cac);
+$hoverbuttonbg: linear-gradient(to right, #9c7cac, #eda0c5);
 $appleWhite: #FAFAFA;
 $bubble: rgba(7, 0, 0, 0.25);
 
@@ -12,7 +14,6 @@ $charcoal: #202123;
 * {
   box-sizing: border-box;
   font-family: 'Jua', sans-serif;
-  // background-color: $appleWhite;
   margin: 0;
   padding: 0;
   cursor: url('https://res.cloudinary.com/dnr41r1lq/image/upload/v1691460747/icons8-cursor-64_qbudfa.png'), pointer;
@@ -23,7 +24,7 @@ $charcoal: #202123;
   position: relative;
   align-items: center;
   width: 100%;
-  min-height: 100vh;
+  min-height: 95vh;
   color: $charcoal;
   background: $pink-to-purple;
   &.dark {
@@ -52,61 +53,54 @@ $charcoal: #202123;
   @media screen and (max-width: 900px) {
     flex-direction: column-reverse;
   }
-}
-
-.hero-column {
-  display: flex;
-  border: 2px solid green;
-  flex-basis: 50%;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-title,
-.hero-subtitle {
+  .hero-column {
+    display: flex;
+    flex-basis: 50%;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-title,
+  .hero-subtitle {
   font-family: 'Play', sans-serif;
-}
-
-.hero-title {
-  color: $appleWhite;
-  font-size: 72px;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid #5e253c;
-  @media screen and (max-width: 600px) {
-    font-size: 36px;
   }
-}
-
-.anim-typewriter {
-  animation: typewriter 2s steps(44) 1s 1 normal both,
-    blinkTextCursor 500ms steps(44) infinite normal;
-}
-@keyframes typewriter {
-  from { width: 0; }
-  to { width: 100%; }
-}
-@keyframes blinkTextCursor {
-  from { border-right-color: #5e253c; }
-  to { border-right-color: transparent; }
-}
-
-.hero-subtitle {
-  color: rgba(250, 250, 250, 0.8);
-  font-size: 28px;
-  letter-spacing: 0.15rem;
-  animation-name: fade-in;
-  animation-duration: 5s;
-  @media screen and (max-width: 600px) {
-    font-size: 16px;
-    text-align: center;
+  .hero-title {
+    color: $appleWhite;
+    font-size: 72px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #5e253c;
+    @media screen and (max-width: 600px) {
+      font-size: 36px;
+    }
   }
-}
-
-@keyframes fade-in{
-  0% { opacity: 0; }
-  60% { opacity: 0; }
-  100% { opacity: 1; }
+  .anim-typewriter {
+    animation: typewriter 2s steps(44) 1s 1 normal both,
+      blinkTextCursor 500ms steps(44) infinite normal;
+  }
+  @keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  @keyframes blinkTextCursor {
+    from { border-right-color: #5e253c; }
+    to { border-right-color: transparent; }
+  }
+  .hero-subtitle {
+    color: rgba(250, 250, 250, 0.8);
+    font-size: 28px;
+    letter-spacing: 0.15rem;
+    animation-name: fade-in;
+    animation-duration: 5s;
+    @keyframes fade-in{
+      0% { opacity: 0; }
+      60% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 16px;
+      text-align: center;
+    }
+  }
 }
 
 .hero-right {
@@ -126,14 +120,17 @@ $charcoal: #202123;
     align-items: center;
     justify-content: center;
     @media screen and (max-width: 900px) {
+      width: 40%;
+    }
+    @media screen and (max-width: 600px) {
       width: 60%;
     }
     .character {
-      height: 295px;
-      width: 295px;
+      height: 300px;
+      width: 300px;
       @media screen and (max-width: 900px) {
-        height: 155px;
-        width: 155px;
+        height: 175px;
+        width: 175px;
       }
       @media screen and (max-width: 600px) {
         height: 112px;
@@ -152,19 +149,22 @@ $charcoal: #202123;
   &.dark {
     background-color: $charcoal;
   }
-}
+  &::after {
+    content: '';
+    position: absolute;
+    right: -144px;
 
-.hero-slant::after {
-  content: '';
-  position: absolute;
-  right: -160px;
-
-  border-width: 80px;
-  border-style: solid;
-  border-left-color: $appleWhite;
-  border-right-color: transparent;
-  border-top-color: transparent;
-  border-bottom-color: $appleWhite;
+    border-width: 72px;
+    border-style: solid;
+    border-left-color: $appleWhite;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: $appleWhite;
+    @media screen and (max-width: 600px) {
+      right: -100px;
+      border-width: 50px;
+    }
+  }
 }
 
 .hero-btn-icon {
@@ -188,18 +188,19 @@ $charcoal: #202123;
   left: 20%;
   height: 6rem;
   width: 16rem;
-  border: 4px solid #eda0c5;
+  border: 4px solid #5e253c;
   border-radius: 4rem 4rem;
-  background-color: #9c7cac;
+  background: $buttonbg;
   color: $appleWhite;
   font-size: 28px;
   z-index: 1;
+  overflow: hidden;
   @media screen and (max-width: 900px) {
     height: 4rem;
     width: 12rem;
     font-size: 18px;
     border-radius: 3rem 3rem;
-    border: 3px solid #eda0c5;
+    border-width: 3px;
   }
   @media screen and (max-width: 600px) {
     height: 3rem;
@@ -207,15 +208,40 @@ $charcoal: #202123;
     font-size: 14px;
     border-radius: 2rem 2rem;
   }
+  &:hover {
+    background: $hoverbuttonbg;
+    border: 4px solid #5e253c;
+  }
+  &:active {
+    background: #8c89b6;
+  }
 }
 
-.hero-btn:hover {
-  background-color: #9b98ca;
-  border: 4px solid #5e253c;
+button:before {
+  content: '';
+  position: absolute;
+  height: 100px;
+  width: 20px;
+  background: $appleWhite;
+  box-shadow: 0 0 10px #fff;
+  filter: blur(1px);
+  opacity: 0.6;
+  top: -22px;
+  transition: 0.7s;
+  transform: rotate(-20deg) translateX(-60px);
 }
-.hero-btn:active {
-  background-color: #8c89b6;
+
+button:hover:before {
+  transform: rotate(-20deg) translateX(140px, 70px);
 }
+
+// .hero-btn:hover {
+//   background-color: #9b98ca;
+//   border: 4px solid #5e253c;
+// }
+// .hero-btn:active {
+//   background-color: #8c89b6;
+// }
 
 // @media screen and (max-width: 900px) { // on materialUi breakpoints, standards for responsive design: 1200, 900, 600
 //   // .hero-btn-icon {
