@@ -146,39 +146,38 @@ $charcoal: #202123;
   background-color: $appleWhite;
   height: 17vh;
   width: 33vw;
+  @media screen and (max-width: 600px) {
+    height: 15vh;
+  }
+  @media screen and (max-width: 400px) {
+    height: 14vh;
+  }
   &.dark {
     background-color: $charcoal;
   }
   &::after {
     content: '';
     position: absolute;
-    right: -144px;
+    right: -160px;
 
-    border-width: 72px;
+    border-width: 80px;
     border-style: solid;
     border-left-color: $appleWhite;
     border-right-color: transparent;
     border-top-color: transparent;
     border-bottom-color: $appleWhite;
     @media screen and (max-width: 600px) {
-      right: -100px;
-      border-width: 50px;
+      right: -144px;
+      border-width: 72px;
     }
-  }
-}
-
-.hero-btn-icon {
-  background: transparent;
-  color: $appleWhite;
-  font-size: 28px;
-  margin-right: 15px;
-  @media screen and (max-width: 900px) {
-    font-size: 18px;
-    margin-right: 10px;
-  }
-  @media screen and (max-width: 600px) {
-    font-size: 14px;
-    margin-right: 8px;
+    @media screen and (max-width: 400px) {
+      right: -104px;
+      border-width: 52px;
+    }
+    @media screen and (max-width: 350px) {
+      right: -94px;
+      border-width: 47px;
+    }
   }
 }
 
@@ -196,44 +195,71 @@ $charcoal: #202123;
   z-index: 1;
   overflow: hidden;
   @media screen and (max-width: 900px) {
-    height: 4rem;
-    width: 12rem;
-    font-size: 18px;
+    height: 5rem;
+    width: 14rem;
+    font-size: 24px;
     border-radius: 3rem 3rem;
     border-width: 3px;
+    top: 30%;
   }
   @media screen and (max-width: 600px) {
-    height: 3rem;
-    width: 6rem;
-    font-size: 14px;
+    height: 4rem;
+    width: 10rem;
+    font-size: 20px;
     border-radius: 2rem 2rem;
+  }
+  @media screen and (max-width: 500px) {
+    height: 3.5rem;
+    width: 9rem;
+    font-size: 18px;
+    top: 35%;
+  }
+  @media screen and (max-width: 400px) {
+    height: 3rem;
+    width: 8rem;
+    font-size: 16px;
+    top: 40%;
+    left: 10%;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 22px;
+    background: #fff;
+    box-shadow: 0 0 10px #fff;
+    filter: blur(2px);
+    opacity: 0.7;
+    top: -22px;
+    transition: 0.4s;
+    transform: rotate(-20deg) translateX(-60px);
   }
   &:hover {
     background: $hoverbuttonbg;
     border: 4px solid #5e253c;
+    &::before{
+      transform: rotate(-20deg) translate(155px, 70px);
+    }
   }
   &:active {
     background: #8c89b6;
   }
+  .hero-btn-icon {
+    background: transparent;
+    color: $appleWhite;
+    font-size: 28px;
+    margin-right: 15px;
+    @media screen and (max-width: 900px) {
+      font-size: 20px;
+      margin-right: 10px;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 18px;
+      margin-right: 8px;
+    }
+  }
 }
 
-button:before {
-  content: '';
-  position: absolute;
-  height: 100px;
-  width: 20px;
-  background: $appleWhite;
-  box-shadow: 0 0 10px #fff;
-  filter: blur(1px);
-  opacity: 0.6;
-  top: -22px;
-  transition: 0.7s;
-  transform: rotate(-20deg) translateX(-60px);
-}
-
-button:hover:before {
-  transform: rotate(-20deg) translateX(140px, 70px);
-}
 
 // .hero-btn:hover {
 //   background-color: #9b98ca;
