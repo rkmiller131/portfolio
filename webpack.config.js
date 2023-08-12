@@ -7,10 +7,6 @@ module.exports = {
     path: path.join(__dirname, 'client', 'dist'),
     filename: 'bundle.js'
   },
-  devServer: {
-    hot: false,
-    liveReload: true,
-  },
   module: {
     rules: [
       {
@@ -22,16 +18,14 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: [
           "style-loader",
-          // Translates CSS into CommonJS
           "css-loader",
-          // Compiles Sass to CSS
           "sass-loader",
         ],
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
         type: 'asset/resource',
-        use: { loader: 'file-loader' }
+        use: 'file-loader'
       },
     ]
   }

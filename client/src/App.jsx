@@ -4,8 +4,8 @@ import './styles/hero.scss'
 
 export default function App() {
   return (
-    <div>
+    <main>
       <Hero />
-    </div>
+    </main>
   )
 }
