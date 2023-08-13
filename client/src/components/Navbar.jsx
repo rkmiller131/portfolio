@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
+import { useTheme } from '../DarkThemeContext.jsx';
 import NavMobile from './NavMobile.jsx';
 
 import '../styles/navbar.scss';
 
 export default function Navbar() {
+  const darkMode = useTheme();
   return (
-    <header className="toolbar">
+    <header className={darkMode ? "toolbar dark" : "toolbar"}>
       <a href="/">
-        <img src="https://res.cloudinary.com/dnr41r1lq/image/upload/v1691612528/RachelLogoRed_jayuhq.png" alt="Rachel's logo: semicolon inside two curly braces"/>
+        {darkMode ?
+          <img src="https://res.cloudinary.com/dnr41r1lq/image/upload/v1691955059/RachelLogoWhite_dsvjm8.png" alt="Rachel's logo: semicolon inside two curly braces" />
+          :
+          <img src="https://res.cloudinary.com/dnr41r1lq/image/upload/v1691612528/RachelLogoRed_jayuhq.png" alt="Rachel's logo: semicolon inside two curly braces"/>
+        }
       </a>
       <nav className="toolbar-navigation">
         <NavMobile />

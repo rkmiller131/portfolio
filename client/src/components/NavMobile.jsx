@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTheme } from '../DarkThemeContext.jsx';
 import { Drawer, IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Box from '@mui/material/Box';
@@ -12,6 +13,7 @@ import '../styles/navmobile.scss';
 
 export default function NavMobile() {
   const [toggleDrawer, setToggleDrawer] = useState(false);
+  const darkMode = useTheme();
 
   const styles = {
     menu: {
@@ -55,7 +57,7 @@ export default function NavMobile() {
   return (
     <>
       <IconButton sx={{position: 'fixed', right: '2%'}} aria-label='menu' onClick={() => setToggleDrawer(true)}>
-        <MenuIcon className='navburger' fontSize='large'/>
+        <MenuIcon className={darkMode ? 'navburger dark' : 'navburger'} fontSize='large'/>
       </IconButton>
       <Drawer
         PaperProps={{
