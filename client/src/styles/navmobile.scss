@@ -7,6 +7,12 @@ $red: #5e253c;
 $charcoal: #202123;
 $purple: #9c7cac;
 
+.menu {
+  visibility: hidden;
+  @media screen and (max-width: 670px) {
+    visibility: visible;
+  }
+}
 .navburger {
   color: $red;
   visibility: hidden;
