@@ -1,11 +1,13 @@
 $appleWhite: #FAFAFA;
+$charcoal: #202123;
+$purple: #9c7cac;
 
 .toolbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background: linear-gradient(#9c7cac, transparent);
-  z-index: 999;
+  background: linear-gradient($purple, transparent);
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -41,6 +43,15 @@ $appleWhite: #FAFAFA;
         &:hover {
           color: #5e253c;
         }
+      }
+    }
+  }
+  &.dark {
+    background: linear-gradient($charcoal, transparent);
+    nav ul li a {
+      color: $purple;
+      &:hover {
+        color: $appleWhite;
       }
     }
   }

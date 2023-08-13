@@ -119,6 +119,9 @@ $charcoal: #202123;
     display: flex;
     align-items: center;
     justify-content: center;
+    &.dark {
+      background-color: #9c7cac;
+    }
     @media screen and (max-width: 900px) {
       width: 60%;
     }
@@ -146,26 +149,29 @@ $charcoal: #202123;
   background-color: $appleWhite;
   height: 17vh;
   width: 33vw;
+  &.dark {
+    background-color: $charcoal;
+  }
   @media screen and (max-width: 600px) {
     height: 15vh;
   }
   @media screen and (max-width: 400px) {
     height: 14vh;
   }
-  &.dark {
-    background-color: $charcoal;
-  }
   &::after {
     content: '';
     position: absolute;
     right: -160px;
-
     border-width: 80px;
     border-style: solid;
     border-left-color: $appleWhite;
     border-right-color: transparent;
     border-top-color: transparent;
     border-bottom-color: $appleWhite;
+    &.dark {
+      border-left-color: $charcoal;
+      border-bottom-color: $charcoal;
+    }
     @media screen and (max-width: 600px) {
       right: -144px;
       border-width: 72px;
