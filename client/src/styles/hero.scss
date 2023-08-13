@@ -70,7 +70,7 @@ $charcoal: #202123;
     overflow: hidden;
     border-right: 3px solid #5e253c;
     @media screen and (max-width: 600px) {
-      font-size: 36px;
+      font-size: 48px;
     }
   }
   .anim-typewriter {
@@ -97,7 +97,7 @@ $charcoal: #202123;
       100% { opacity: 1; }
     }
     @media screen and (max-width: 600px) {
-      font-size: 16px;
+      font-size: 22px;
       text-align: center;
     }
   }
@@ -114,16 +114,16 @@ $charcoal: #202123;
   .character-backdrop {
     background-color: #eda0c5;
     border-radius: 1rem 1rem;
-    height: 45%;
-    width: 70%;
+    height: 50%;
+    width: 75%;
     display: flex;
     align-items: center;
     justify-content: center;
     @media screen and (max-width: 900px) {
-      width: 40%;
+      width: 60%;
     }
     @media screen and (max-width: 600px) {
-      width: 60%;
+      width: 70%;
     }
     .character {
       height: 300px;
@@ -133,8 +133,8 @@ $charcoal: #202123;
         width: 175px;
       }
       @media screen and (max-width: 600px) {
-        height: 112px;
-        width: 112px;
+        height: 150px;
+        width: 150px;
       }
     }
   }

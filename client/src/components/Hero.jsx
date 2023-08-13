@@ -6,7 +6,7 @@ import Navbar from './Navbar.jsx';
 
 export default function Hero() {
   return (
-    <section className="hero-section" id="hero">
+    <section className="hero-section" id="home">
       <Navbar />
       <div className="white-grid"></div>
       <div className="hero-content-container">
