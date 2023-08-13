@@ -5,42 +5,43 @@ $appleWhite: #FAFAFA;
   top: 0;
   width: 100%;
   background: linear-gradient(#9c7cac, transparent);
-}
-
-.toolbar-navigation {
+  z-index: 999;
   display: flex;
   align-items: center;
-}
-
-.toolbar-logo img {
-  height: 4rem;
-  margin-left: 15%;
-}
-
-.spacer {
-  flex: 1;
-}
-
-.navigation-items {
-  margin-right: 2%;
-}
-
-.navigation-items ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.navigation-items li {
-  padding: 0 1.2rem;
-  font-size: 28px;
-}
-
-.navigation-items a {
-  color: $appleWhite;
-  text-decoration: none;
-  &:hover, &:active {
-    color: #5e253c;
+  justify-content: space-between;
+  padding: 25px;
+  @media screen and (max-width: 400px) {
+    padding: 10px;
+  }
+  img {
+    height: 4rem;
+    @media screen and (max-width: 400px) {
+      height: 2.5rem;
+    }
+  }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    @media screen and (max-width: 670px) {
+      visibility: hidden;
+    }
+    li {
+      display: inline-block;
+      a {
+        display: block;
+        color: $appleWhite;
+        text-decoration: none;
+        font-size: 1.5rem;
+        padding: 10px;
+        &:hover {
+          color: #5e253c;
+        }
+      }
+    }
   }
 }

@@ -6,7 +6,7 @@ import Navbar from './Navbar.jsx';
 
 export default function Hero() {
   return (
-    <section className="hero-section" id="hero">
+    <section className="hero-section" id="home">
       <Navbar />
       <div className="white-grid"></div>
       <div className="hero-content-container">
@@ -25,10 +25,12 @@ export default function Hero() {
         </div>
       </div>
       <div className="hero-slant">
-        <button className="hero-btn">
-          <FontAwesomeIcon icon={faDownload} className="hero-btn-icon" />
-          Resume
-        </button>
+        <a href="https://app.box.com/s/kjxbe409i76g3mi6v62feikjx4kxuu8p" target="blank">
+          <button className="hero-btn">
+            <FontAwesomeIcon icon={faDownload} className="hero-btn-icon" />
+            Resume
+          </button>
+        </a>
       </div>
     </section>
   )

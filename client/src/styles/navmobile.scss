@@ -1,0 +1,19 @@
+// light mode variables
+$appleWhite: #FAFAFA;
+$pink: #eda0c5;
+$purple: #9c7cac;
+$red: #5e253c;
+
+// dark mode variables
+$charcoal: #202123;
+
+.navburger {
+  color: $red;
+  visibility: hidden;
+  @media screen and (max-width: 670px) {
+    visibility: visible;
+  }
+  &.dark {
+    color: $purple;
+  }
+}
