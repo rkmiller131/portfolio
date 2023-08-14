@@ -12,12 +12,12 @@ export default function TechStackItem({ section }) {
       imgList = ['js', 'react', 'reactnative', 'html', 'css', 'sass'];
       break;
     case 'backEnd':
-      techList = ['Node', 'Express', 'MongoDB', 'PostgreSQL', 'MySQL', 'Spring MVC'];
-      imgList = ['js', 'react', 'reactnative', 'html', 'css', 'sass'];
+      techList = ['Node', 'Express', 'MongoDB', 'PostgreSQL', 'MySQL', 'SpringMVC'];
+      imgList = ['node', 'express', 'mongo', 'postgres', 'mysql', 'spring'];
       break;
     case 'devTools':
       techList = ['Jest', 'GitHub', 'Trello', 'Amazon AWS', 'CircleCI', 'Webpack'];
-      imgList = ['js', 'react', 'reactnative', 'html', 'css', 'sass'];
+      imgList = ['jest', 'github', 'trello', 'aws', 'circleci', 'webpack'];
       break;
     default:
       return techList;
