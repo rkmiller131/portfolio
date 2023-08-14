@@ -56,7 +56,7 @@ export default function NavMobile() {
 
   return (
     <>
-      <IconButton sx={{position: 'fixed', right: '2%'}} aria-label='menu' onClick={() => setToggleDrawer(true)}>
+      <IconButton sx={{position: 'fixed', right: '2%'}} aria-label='menu' className='menu' onClick={() => setToggleDrawer(true)}>
         <MenuIcon className={darkMode ? 'navburger dark' : 'navburger'} fontSize='large'/>
       </IconButton>
       <Drawer

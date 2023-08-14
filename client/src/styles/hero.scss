@@ -151,6 +151,10 @@ $charcoal: #202123;
   width: 33vw;
   &.dark {
     background-color: $charcoal;
+    &::after {
+      border-left-color: $charcoal;
+      border-bottom-color: $charcoal;
+    }
   }
   @media screen and (max-width: 600px) {
     height: 15vh;
@@ -168,12 +172,9 @@ $charcoal: #202123;
     border-right-color: transparent;
     border-top-color: transparent;
     border-bottom-color: $appleWhite;
-    &.dark {
-      border-left-color: $charcoal;
-      border-bottom-color: $charcoal;
-    }
+
     @media screen and (max-width: 600px) {
-      right: -144px;
+      right: -143px;
       border-width: 72px;
     }
     @media screen and (max-width: 400px) {
