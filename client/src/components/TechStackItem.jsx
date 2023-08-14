@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import { motion, useInView, useAnimation } from 'framer-motion';
 import { useTheme } from '../DarkThemeContext.jsx';
 
 export default function TechStackItem({ section }) {
   const darkMode = useTheme();
+  // set a reference to our wrapping div, and track if it is in view ONCE it is scrolled to (framer motion uses intersection observer under the hood, only fires it once rather than over and over again)
+  const stackSectionRef = useRef(null);
+  const isInView = useInView(stackSectionRef, { once: true});
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      // controls.start('visible') is the same as controls.start({ y: 0, opacity: 1 });
+      // it maps to the visible variant in the motion.div below
+      controls.start('visible');
+    }
+  }, [isInView])
+
   let techList;
   let imgList;
 
@@ -24,7 +38,17 @@ export default function TechStackItem({ section }) {
   }
 
   return (
-    <div className={darkMode ? 'stack-item-container dark' : 'stack-item-container'}>
+    <motion.div
+      ref={stackSectionRef}
+      className={darkMode ? 'stack-item-container dark' : 'stack-item-container'}
+      variants={{
+        hidden: { y: 20, opacity: 0 },
+        visible: { y: 0, opacity: 1 }
+      }}
+      initial="hidden"
+      animate={controls}
+      transition={{ duration: 0.5 }}
+    >
       {/* for responsiveness: change the section titles to be above the icons on mobile */}
       <span className={darkMode ? 'section-label-mobile dark' : 'section-label-mobile'}>{`[ ${section} ]`}</span>
       {/* for an on hover effect to display the text of each technology */}
@@ -46,6 +70,6 @@ export default function TechStackItem({ section }) {
           <img src="https://res.cloudinary.com/dnr41r1lq/image/upload/v1691974385/redCurlyClose_e0boks.png" alt="Close red curly brace icon" />
         </div>
       }
-    </div>
+    </motion.div>
   )
 }
