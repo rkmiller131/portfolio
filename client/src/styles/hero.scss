@@ -20,6 +20,10 @@ $charcoal: #202123;
   cursor: url('https://res.cloudinary.com/dnr41r1lq/image/upload/v1691973727/cursor_p0d8q4.png'), pointer;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .hero-section {
   display: flex;
   position: relative;
