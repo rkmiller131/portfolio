@@ -4,16 +4,20 @@ import { useTheme } from '../DarkThemeContext.jsx';
 export default function TechStackItem({ section }) {
   const darkMode = useTheme();
   let techList;
+  let imgList;
 
   switch(section) {
     case 'frontEnd':
       techList = ['JavaScript', 'React', 'React Native', 'Html', 'CSS', 'Sass'];
+      imgList = ['js', 'react', 'reactnative', 'html', 'css', 'sass'];
       break;
     case 'backEnd':
       techList = ['Node', 'Express', 'MongoDB', 'PostgreSQL', 'MySQL', 'Spring Boot MVC'];
+      imgList = ['js', 'react', 'reactnative', 'html', 'css', 'sass'];
       break;
     case 'devTools':
       techList = ['Jest', 'GitHub', 'Trello', 'Amazon AWS', 'CircleCI', 'Webpack'];
+      imgList = ['js', 'react', 'reactnative', 'html', 'css', 'sass'];
       break;
     default:
       return techList;
@@ -21,21 +25,22 @@ export default function TechStackItem({ section }) {
 
   return (
     <div className={darkMode ? 'stack-item-container dark' : 'stack-item-container'}>
+      <span className={darkMode ? 'section-label-mobile dark' : 'section-label-mobile'}>{`[ ${section} ]`}</span>
       {darkMode ?
         <div className="stack-items dark">
-          <img src="" alt="Open purple curly brace icon" />
+          <img src="https://res.cloudinary.com/dnr41r1lq/image/upload/v1691974395/purpleCurlyOpen_z2v3tb.png" alt="Open purple curly brace icon" />
           <span className="section-label dark">{`${section}: [`}</span>
-          {techList.map((technology) => <div>{technology}</div>)}
+          {imgList.map((icon) => <img className="tech-icon" src={require(`../assets/dark/dark${icon}.png`)}/>)}
           <span className="section-label dark">{']'}</span>
-          <img src="" alt="Close purple curly brace icon" />
+          <img src="https://res.cloudinary.com/dnr41r1lq/image/upload/v1691974392/purpleCurlyClose_dbeo5w.png" alt="Close purple curly brace icon" />
         </div>
         :
         <div className="stack-items">
-          <img src="https://res.cloudinary.com/dnr41r1lq/image/upload/v1691373172/favicon_latcnb.ico" alt="Open red curly brace icon" />
+          <img src="https://res.cloudinary.com/dnr41r1lq/image/upload/v1691974389/redCurlyOpen_xkvc6w.png" alt="Open red curly brace icon" />
           <span className="section-label">{`${section}: [`}</span>
-          {techList.map((technology) => <div>{technology}</div>)}
+          {imgList.map((icon) => <img className="tech-icon" src={require(`../assets/light/${icon}.png`)}/>)}
           <span className="section-label">{']'}</span>
-          <img src="https://res.cloudinary.com/dnr41r1lq/image/upload/v1691373172/favicon_latcnb.ico" alt="Close red curly brace icon" />
+          <img src="https://res.cloudinary.com/dnr41r1lq/image/upload/v1691974385/redCurlyClose_e0boks.png" alt="Close red curly brace icon" />
         </div>
       }
     </div>

@@ -23,10 +23,21 @@ module.exports = {
         ],
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        type: 'asset/resource',
-        use: 'file-loader'
+        test: /\.(png|jpg|gif)$/i,
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 25000,
+            esModule: false
+          }
+        }]
       },
+      {
+        test:/\.html$/,
+        use: [
+          'html-loader'
+        ]
+      }
     ]
   }
 }

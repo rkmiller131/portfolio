@@ -9,6 +9,7 @@ $bubble: rgba(7, 0, 0, 0.25);
 // Dark mode variables
 $black-to-purple: linear-gradient(#202123, #9c7cac);
 $purple-to-black: linear-gradient(#9c7cac, #202123);
+$purple: #9c7cac;
 $charcoal: #202123;
 
 * {
@@ -16,7 +17,7 @@ $charcoal: #202123;
   font-family: 'Jua', sans-serif;
   margin: 0;
   padding: 0;
-  cursor: url('https://res.cloudinary.com/dnr41r1lq/image/upload/v1691460747/icons8-cursor-64_qbudfa.png'), pointer;
+  cursor: url('https://res.cloudinary.com/dnr41r1lq/image/upload/v1691973727/cursor_p0d8q4.png'), pointer;
 }
 
 .hero-section {
@@ -27,6 +28,9 @@ $charcoal: #202123;
   min-height: 95vh;
   color: $charcoal;
   background: $pink-to-purple;
+  @media screen and (max-width: 400px) {
+    min-height: 75vh;
+  }
   &.dark {
     background: $black-to-purple;
   }
@@ -120,7 +124,7 @@ $charcoal: #202123;
     align-items: center;
     justify-content: center;
     &.dark {
-      background-color: #9c7cac;
+      background-color: $purple;
     }
     @media screen and (max-width: 900px) {
       width: 60%;
@@ -201,6 +205,9 @@ $charcoal: #202123;
   font-size: 28px;
   z-index: 1;
   overflow: hidden;
+  &.dark {
+    border-color: $purple;
+  }
   @media screen and (max-width: 900px) {
     height: 5rem;
     width: 14rem;

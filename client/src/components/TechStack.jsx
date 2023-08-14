@@ -10,11 +10,13 @@ export default function TechStack() {
   const sections = ['frontEnd', 'backEnd', 'devTools'];
 
   return (
-    <section className={darkMode ? 'tech-stack dark' : 'tech-stack'}>
-      <h2 className={darkMode ? 'tech-stack-text dark' : 'tech-stack-text'}>
-        Tech Stack
-      </h2>
-      {sections.map((section, i) => <TechStackItem section={section} key={i}/>)}
+    <section id="about" className={darkMode ? 'tech-stack dark' : 'tech-stack'}>
+      <div className="tech-stack-container">
+        <h2 className={darkMode ? 'tech-stack-text dark' : 'tech-stack-text'}>
+          Tech Stack
+        </h2>
+        {sections.map((section, i) => <TechStackItem section={section} key={i}/>)}
+      </div>
     </section>
   )
 }

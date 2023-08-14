@@ -34,7 +34,7 @@ export default function Hero() {
       </div>
       <div className={`${darkMode ? "hero-slant dark" : "hero-slant"}`}>
         <a href="https://app.box.com/s/kjxbe409i76g3mi6v62feikjx4kxuu8p" target="blank">
-          <button className="hero-btn">
+          <button className={darkMode ? 'hero-btn dark' : 'hero-btn'}>
             <FontAwesomeIcon icon={faDownload} className="hero-btn-icon" />
             Resume
           </button>
