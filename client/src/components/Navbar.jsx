@@ -10,9 +10,9 @@ export default function Navbar() {
     <header className={darkMode ? "toolbar dark" : "toolbar"}>
       <a href="/">
         {darkMode ?
-          <img src="https://res.cloudinary.com/dnr41r1lq/image/upload/v1691955059/RachelLogoWhite_dsvjm8.png" alt="Rachel's logo: semicolon inside two curly braces" />
+          <img src="https://res.cloudinary.com/dnr41r1lq/image/upload/v1691973707/RachelLogoPurple_wurjos.png" alt="Rachel's logo: semicolon inside two curly braces" />
           :
-          <img src="https://res.cloudinary.com/dnr41r1lq/image/upload/v1691612528/RachelLogoRed_jayuhq.png" alt="Rachel's logo: semicolon inside two curly braces"/>
+          <img src="https://res.cloudinary.com/dnr41r1lq/image/upload/v1691973711/RachelLogoRed_si7e32.png" alt="Rachel's logo: semicolon inside two curly braces"/>
         }
       </a>
       <nav className="toolbar-navigation">
