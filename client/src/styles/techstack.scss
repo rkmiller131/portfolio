@@ -1,0 +1,59 @@
+// light mode variables
+$appleWhite: #FAFAFA;
+$pink-to-purple: linear-gradient(to right, #eda0c5, #9c7cac);
+$pink: #eda0c5;
+$red: #5e253c;
+
+// dark mode variables
+$charcoal: #202123;
+$black-to-purple: linear-gradient(#202123, #9c7cac);
+$purple: #9c7cac;
+
+.tech-stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 75vh;
+  width: 100vw;
+  background-color: $appleWhite;
+  position: relative;
+  &.dark {
+    background-color: $charcoal;
+  }
+  .tech-stack-text {
+    color: $red;
+    font-family: 'Play', sans-serif;
+    font-size: 36px;
+    margin-top: 3%;
+    &.dark {
+      color: $appleWhite;
+    }
+  }
+}
+
+.stack-item-container {
+  background: $pink-to-purple;
+  width: 75%;
+  padding: 10px;
+  border: 3px solid $red;
+  .stack-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  img {
+
+  }
+  &.dark {
+
+  }
+  .section-label {
+    color: $appleWhite;
+    font-size: 22px;
+    &.dark {
+      color: $purple;
+    }
+  }
+}
