@@ -9,18 +9,19 @@ $purple: #9c7cac;
 $charcoal: #202123;
 
 .projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-height: 150vh;
   width: 100%;
   background: $purple-to-pink;
   color: $appleWhite;
+  position: relative;
   .project-grid {
     min-height: 150vh;
   }
-  .projects-container {
-    height: 140vh;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
+  .figure-container {
+    align-self: flex-end;
     figure {
       z-index: 50;
       position: relative;
@@ -66,6 +67,72 @@ $charcoal: #202123;
       }
     }
 
+  }
+  .projects-container {
+    height: 150vh;
+    width: 75%;
+    border: 3px solid red;
+    display: flex; // line up the columns in a row
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+      margin-top: 20%;
+    }
+    .project-column {
+      border: 3px solid green;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-basis: 50%;
+      gap: 10%;
+      @media screen and (max-width: 900px) {
+        justify-content: center;
+        align-items: center;
+        gap: 5%;
+      }
+      &.lefty {
+        justify-content: flex-start;
+        @media screen and (max-width: 900px) {
+          justify-content: flex-end;
+        }
+      }
+      &.righty {
+        justify-content: flex-end;
+        @media screen and (max-width: 900px) {
+          justify-content: flex-start;
+        }
+      }
+      .left-col, .right-col {
+        height: 30%;
+        width: 95%;
+        background: $bubble;
+        border: 2px solid yellow;
+        border-radius: 8%;
+        z-index: 50;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media screen and (max-width: 900px) {
+          height: 40%;
+          width: 75%;
+        }
+      }
+      .left-col {
+        margin-top: 15%;
+        margin-right: 5%;
+        @media screen and (max-width: 900px) {
+          margin: 0;
+          margin-bottom: 10%;
+        }
+      }
+      .right-col {
+        margin-bottom: 15%;
+        margin-left: 5%;
+        @media screen and (max-width: 900px) {
+          margin: 0;
+          margin-top: 10%;
+        }
+      }
+    }
   }
   &.dark {
     background: $purple-to-black;
