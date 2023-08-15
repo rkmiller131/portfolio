@@ -18,8 +18,8 @@ export default function Projects() {
             :
             <img className="title-image" src={require('../assets/light/lightModeSlant.png')} alt="slanted figure" />
           }
-          <h2 className="projects-text">Projects</h2>
         </figure>
+        <h2 className="projects-text">Projects</h2>
       </div>
 
       <div className="projects-container">
@@ -29,7 +29,7 @@ export default function Projects() {
         </article>
 
         <article className={darkMode ? 'project-column righty dark' : 'project-column righty'}>
-        {[0, 1].map((placeholder) => <ProjectBubble className={'right-bubble'} key={placeholder} />)}
+          {[0, 1].map((placeholder) => <ProjectBubble className={'right-bubble'} key={placeholder} />)}
         </article>
       </div>
 

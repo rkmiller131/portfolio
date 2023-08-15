@@ -45,28 +45,27 @@ $charcoal: #202123;
           width: 60vw;
         }
       }
-      .projects-text {
-        position: absolute;
-        z-index: 75;
-        font-family: 'Play', sans-serif;
-        font-size: 36px;
-        top: 45px;
-        right: 165px;
-        @media screen and (max-width: 900px) {
-          font-size: 32px;
-          top: 35px;
-          right: 155px;
-        }
-        @media screen and (max-width: 600px) {
-          font-size: 28px;
-          top: 35px;
-          right: 115px;
-        }
-        @media screen and (max-width: 450px) {
-          font-size: 24px;
-          top: 32px;
-          right: 60px;
-        }
+    }
+    .projects-text {
+      position: absolute;
+      z-index: 75;
+      font-family: 'Play', sans-serif;
+      font-size: 36px;
+      top: 3.5%;
+      right: 13%;
+      @media screen and (max-width: 900px) {
+        font-size: 32px;
+        top: 3%;
+        right: 20%;
+      }
+      @media screen and (max-width: 600px) {
+        font-size: 28px;
+        right: 25%;
+      }
+      @media screen and (max-width: 450px) {
+        font-size: 24px;
+        top: 2.5%;
+        right: 16%;
       }
     }
 
