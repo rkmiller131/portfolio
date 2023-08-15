@@ -19,6 +19,9 @@ $charcoal: #202123;
   position: relative;
   .project-grid {
     min-height: 150vh;
+    @media screen and (max-width: 900px) {
+      min-height: 160vh;
+    }
   }
   .figure-container {
     align-self: flex-end;
@@ -71,14 +74,12 @@ $charcoal: #202123;
   .projects-container {
     height: 150vh;
     width: 75%;
-    border: 3px solid red;
     display: flex; // line up the columns in a row
     @media screen and (max-width: 900px) {
       flex-direction: column;
       margin-top: 20%;
     }
     .project-column {
-      border: 3px solid green;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -90,20 +91,30 @@ $charcoal: #202123;
         gap: 5%;
       }
       &.lefty {
+        border-right: 4px solid $appleWhite;
         justify-content: flex-start;
+        &.dark {
+          border-right: 4px solid $charcoal;
+        }
         @media screen and (max-width: 900px) {
           justify-content: flex-end;
+          border: none;
         }
       }
       &.righty {
+        border-left: 4px solid $appleWhite;
         justify-content: flex-end;
+        &.dark {
+          border-left: 4px solid $charcoal;
+        }
         @media screen and (max-width: 900px) {
           justify-content: flex-start;
+          border: none;
         }
       }
-      .left-col, .right-col {
+      .left-bubble, .right-bubble {
         height: 30%;
-        width: 95%;
+        width: 85%;
         background: $bubble;
         border: 2px solid yellow;
         border-radius: 8%;
@@ -113,20 +124,20 @@ $charcoal: #202123;
         justify-content: center;
         @media screen and (max-width: 900px) {
           height: 40%;
-          width: 75%;
+          width: 100%;
         }
       }
-      .left-col {
+      .left-bubble {
         margin-top: 15%;
-        margin-right: 5%;
+        // margin-right: 5%;
         @media screen and (max-width: 900px) {
           margin: 0;
           margin-bottom: 10%;
         }
       }
-      .right-col {
+      .right-bubble {
         margin-bottom: 15%;
-        margin-left: 5%;
+        // margin-left: 5%;
         @media screen and (max-width: 900px) {
           margin: 0;
           margin-top: 10%;

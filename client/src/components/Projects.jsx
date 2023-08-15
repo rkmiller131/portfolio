@@ -1,4 +1,5 @@
 import React from 'react';
+import ProjectBubble from './ProjectBubble.jsx';
 
 import { useTheme } from '../DarkThemeContext.jsx';
 import '../styles/projects.scss';
@@ -23,14 +24,12 @@ export default function Projects() {
 
       <div className="projects-container">
 
-        <article className="project-column lefty">
-          <div className="left-col">Left 1</div>
-          <div className="left-col">Left 2</div>
+        <article className={darkMode ? 'project-column lefty dark' : 'project-column lefty'}>
+          {[0, 1].map((placeholder) => <ProjectBubble className={'left-bubble'} key={placeholder} />)}
         </article>
 
-        <article className="project-column righty">
-          <div className="right-col">Right 1</div>
-          <div className="right-col">Right 2</div>
+        <article className={darkMode ? 'project-column righty dark' : 'project-column righty'}>
+        {[0, 1].map((placeholder) => <ProjectBubble className={'right-bubble'} key={placeholder} />)}
         </article>
       </div>
 
