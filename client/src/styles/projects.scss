@@ -83,7 +83,6 @@ $charcoal: #202123;
       flex-direction: column;
       align-items: center;
       flex-basis: 50%;
-      gap: 10%;
       @media screen and (max-width: 900px) {
         justify-content: center;
         align-items: center;
@@ -112,10 +111,9 @@ $charcoal: #202123;
         }
       }
       .left-bubble, .right-bubble {
-        height: 30%;
+        height: 35%;
         width: 85%;
         background: $bubble;
-        border: 2px solid yellow;
         border-radius: 8%;
         z-index: 50;
         display: flex;

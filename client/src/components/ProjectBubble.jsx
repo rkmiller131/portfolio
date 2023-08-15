@@ -1,8 +1,9 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
+import MuiMediaCard from './MuiMediaCard.jsx';
 
-export default function ProjectBubble({ className }) {
+export default function ProjectBubble({ project, className }) {
   const bubbleRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: bubbleRef,
@@ -22,7 +23,7 @@ export default function ProjectBubble({ className }) {
       }}
       className={className}
     >
-      IM A LITTLE BUBBLE
+      <MuiMediaCard project={project}/>
     </motion.div>
   );
 
