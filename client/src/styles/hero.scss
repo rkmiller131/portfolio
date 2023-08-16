@@ -182,13 +182,13 @@ html {
     border-top-color: transparent;
     border-bottom-color: $appleWhite;
 
+    @media screen and (max-height: 850px) {
+      right: -130px;
+      border-width: 65px;
+    }
     @media screen and (max-width: 600px) {
       right: -143px;
       border-width: 72px;
-    }
-    @media screen and (max-width: 400px) {
-      right: -104px;
-      border-width: 52px;
     }
     @media screen and (max-width: 350px) {
       right: -94px;

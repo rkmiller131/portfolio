@@ -27,6 +27,9 @@ export default function MuiMediaCard({ project }) {
           src={project.src}
           controls
           sx={{
+            "@media (max-width: 900px)": {
+              height: "120px"
+            },
             "@media (max-width: 450px)": {
               height: "100px"
             }
@@ -35,6 +38,9 @@ export default function MuiMediaCard({ project }) {
       </CardActionArea>
       <CardContent
         sx={{
+          "@media (max-width: 900px)": {
+            padding: "10px"
+          },
           "@media (max-width: 450px)": {
             padding: "8px"
           }
@@ -46,6 +52,9 @@ export default function MuiMediaCard({ project }) {
           sx={{
             color: '#FAFAFA',
             fontFamily: 'Play, sans-serif',
+            "@media (max-width: 900px)": {
+              fontSize: "1rem"
+            },
             "@media (max-width: 450px)": {
               fontSize: "1rem"
             },
@@ -59,7 +68,7 @@ export default function MuiMediaCard({ project }) {
           sx={{
             color: '#FAFAFA',
             fontFamily: 'JUA, sans-serif',
-            "@media (max-width: 450px)": {
+            "@media (max-width: 900px)": {
               fontSize: "0.65rem"
             },
           }}
