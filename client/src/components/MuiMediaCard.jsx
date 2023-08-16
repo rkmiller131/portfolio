@@ -12,8 +12,11 @@ export default function MuiMediaCard({ project }) {
     <Card sx={{
       maxWidth: 375,
       background: 'transparent',
-      "@media (max-width: 600px)": {
-        display: "none"
+      "@media (max-width: 900px)": {
+        height: "fit-content"
+      },
+      "@media (max-width: 450px)": {
+        maxWidth: 290
       },
      }}>
       <CardActionArea>
@@ -24,18 +27,49 @@ export default function MuiMediaCard({ project }) {
           src={project.src}
           autoPlay
           controls
+          sx={{
+            "@media (max-width: 450px)": {
+              height: "100px"
+            }
+          }}
         />
       </CardActionArea>
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+      <CardContent
+        sx={{
+          "@media (max-width: 450px)": {
+            padding: "8px"
+          }
+        }}
+      >
+        <Typography
+          gutterBottom variant="h5"
+          component="div"
+          sx={{
+            color: '#FAFAFA',
+            fontFamily: 'Play, sans-serif',
+            "@media (max-width: 450px)": {
+              fontSize: "1rem"
+            },
+          }}
+        >
           {project.title}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography
+          variant="body2"
+          color="text.secondary"
+          sx={{
+            color: '#FAFAFA',
+            fontFamily: 'JUA, sans-serif',
+            "@media (max-width: 450px)": {
+              fontSize: "0.65rem"
+            },
+          }}
+        >
           {project.description}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Github</Button>
+        <Button size="small" sx={{ color: "#eda0c5", textDecoration: "underline" }}>Github</Button>
       </CardActions>
     </Card>
   )

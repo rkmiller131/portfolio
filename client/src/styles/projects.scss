@@ -93,6 +93,10 @@ $charcoal: #202123;
         justify-content: flex-start;
         &.dark {
           border-right: 4px solid $charcoal;
+          @media screen and (max-width: 900px) {
+            justify-content: flex-end;
+            border: none;
+          }
         }
         @media screen and (max-width: 900px) {
           justify-content: flex-end;
@@ -104,6 +108,10 @@ $charcoal: #202123;
         justify-content: flex-end;
         &.dark {
           border-left: 4px solid $charcoal;
+          @media screen and (max-width: 900px) {
+            justify-content: flex-start;
+            border: none;
+          }
         }
         @media screen and (max-width: 900px) {
           justify-content: flex-start;
@@ -122,6 +130,7 @@ $charcoal: #202123;
         @media screen and (max-width: 900px) {
           height: 40%;
           width: 100%;
+          overflow: hidden;
         }
       }
       .left-bubble {

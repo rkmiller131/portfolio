@@ -14,9 +14,9 @@ export default function Projects() {
       src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1692131215/cfVanguardDemo_pyu7nq.mp4'
     },
     {
-      title: 'Personal Portfolio',
-      description: 'An echo of this frotend portfolio. UI designed with Figma and developed with plain React, Scss, and MaterialUI.',
-      src: ''
+      title: 'Village Sports',
+      description: 'A sports league meetup mobile app with React Native. Developed a Home Page carousel, weekly announcement feed, and Wishlist feature, integrating Firebase authentication and Firestore database.',
+      src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1692151765/Untitled_video_ohhxpp.mp4'
     }
   ];
   const rightProjects = [
@@ -26,9 +26,9 @@ export default function Projects() {
       src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1692139856/ShortenedFECDemo_vyagyn.mp4'
     },
     {
-      title: 'Lifetrack Labs',
+      title: 'LifeTrack Labs',
       description: 'A minimum viable product (MVP) created in 2.5 days as a prototype for a blood lab interpretation app. A passion project that uses unbiased research to establish correlations between blood lab results and lifestyle choices.',
-      src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1692139995/mvp-demo_lmtz2a.mp4'
+      src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1692147931/LifeTrackDemo_1_oepqcq.mp4'
     }
   ];
 
@@ -50,11 +50,11 @@ export default function Projects() {
       <div className="projects-container">
 
         <article className={darkMode ? 'project-column lefty dark' : 'project-column lefty'}>
-          {leftProjects.map((project) => <ProjectBubble project={project} className={'left-bubble'} key={project} />)}
+          {leftProjects.map((project, i) => <ProjectBubble project={project} className={'left-bubble'} key={i} />)}
         </article>
 
         <article className={darkMode ? 'project-column righty dark' : 'project-column righty'}>
-          {rightProjects.map((project) => <ProjectBubble project={project} className={'right-bubble'} key={project} />)}
+          {rightProjects.map((project, i) => <ProjectBubble project={project} className={'right-bubble'} key={i} />)}
         </article>
       </div>
 
