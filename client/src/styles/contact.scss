@@ -1,0 +1,96 @@
+// light mode variables
+$pink-to-purple: linear-gradient(#eda0c5, #9c7cac);
+$buttonbg: linear-gradient(to right, #eda0c5, #9c7cac);
+$hoverbuttonbg: linear-gradient(to right, #9c7cac, #eda0c5);
+$appleWhite: #FAFAFA;
+$red: #5e253c;
+
+// dark mode variables
+$black-to-purple: linear-gradient(#202123, #9c7cac);
+$cardCharcoal: #3E3744;
+$purple: #9c7cac;
+$charcoal: #202123;
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 90vh;
+  width: 100%;
+  padding: 5% 8% 2% 8%;
+  background: $appleWhite;
+  .contact-title {
+    color: $red;
+    font-family: 'Play', sans-serif;
+    font-size: 36px;
+    margin-bottom: 5%;
+    @media screen and (max-width: 450px) {
+      font-size: 28px;
+    }
+    &.dark {
+      color: $appleWhite;
+    }
+  }
+  .contact-container {
+    display: flex;
+    justify-content: center;
+    height: 60vh;
+    width: 75%;
+    box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.3);
+    border-radius: 1rem 1rem;
+    background: $appleWhite;
+    &.dark {
+      background: $cardCharcoal;
+      border: 1px solid $cardCharcoal;
+    }
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+    }
+    border: 1px solid $red;
+    .contact-column-left {
+      // border: 2px solid blue;
+      display: flex;
+      flex-basis: 60%;
+    }
+    .contact-column-right {
+      // border: 2px solid red;
+      border-radius: 0 1rem 1rem 0;
+      background: $pink-to-purple;
+      display: flex;
+      flex-basis: 40%;
+      &.dark {
+        background: $purple;
+      }
+      @media screen and (max-width: 900px) {
+        border-radius: 0 0 1rem 1rem;
+      }
+    }
+  }
+  .portfolio-github {
+    color: $red;
+    align-self: flex-start;
+    padding: 3% 13%;
+    font-size: 18px;
+    &.dark {
+      color: $appleWhite;
+    }
+  }
+  .contact-footer {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    color: rgba(94,37,60, 0.5);
+    a {
+      color: rgba(156,124,172, 0.8);
+    }
+    &.dark {
+      color: rgba(250,250,250, 0.5);
+    }
+  }
+  &.dark {
+    background: $charcoal;
+  }
+}
