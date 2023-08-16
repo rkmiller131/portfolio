@@ -25,9 +25,11 @@ export default function MuiMediaCard({ project }) {
           alt="project prieview video"
           height="200"
           src={project.src}
-          autoPlay
           controls
           sx={{
+            "@media (max-width: 900px)": {
+              height: "120px"
+            },
             "@media (max-width: 450px)": {
               height: "100px"
             }
@@ -36,6 +38,9 @@ export default function MuiMediaCard({ project }) {
       </CardActionArea>
       <CardContent
         sx={{
+          "@media (max-width: 900px)": {
+            padding: "10px"
+          },
           "@media (max-width: 450px)": {
             padding: "8px"
           }
@@ -47,6 +52,9 @@ export default function MuiMediaCard({ project }) {
           sx={{
             color: '#FAFAFA',
             fontFamily: 'Play, sans-serif',
+            "@media (max-width: 900px)": {
+              fontSize: "1rem"
+            },
             "@media (max-width: 450px)": {
               fontSize: "1rem"
             },
@@ -60,7 +68,7 @@ export default function MuiMediaCard({ project }) {
           sx={{
             color: '#FAFAFA',
             fontFamily: 'JUA, sans-serif',
-            "@media (max-width: 450px)": {
+            "@media (max-width: 900px)": {
               fontSize: "0.65rem"
             },
           }}
@@ -69,7 +77,9 @@ export default function MuiMediaCard({ project }) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" sx={{ color: "#eda0c5", textDecoration: "underline" }}>Github</Button>
+        <a href={project.github} target="blank">
+          <Button size="small" sx={{ color: "#eda0c5", textDecoration: "underline" }}>Github</Button>
+        </a>
       </CardActions>
     </Card>
   )

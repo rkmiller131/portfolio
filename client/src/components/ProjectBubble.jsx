@@ -5,6 +5,7 @@ import MuiMediaCard from './MuiMediaCard.jsx';
 
 export default function ProjectBubble({ project, className }) {
   const bubbleRef = useRef(null);
+
   const { scrollYProgress } = useScroll({
     target: bubbleRef,
     // when the top of the target bubble (0 or 'start') reaches the end of the viewport (1 or 'end'), start the animation.
