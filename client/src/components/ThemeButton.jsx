@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTheme, useThemeUpdate } from '../DarkThemeContext.jsx';
+
+import WbSunnyIcon from '@mui/icons-material/WbSunny';
+import ModeNightIcon from '@mui/icons-material/ModeNight';
 
 import '../styles/themebtn.scss';
 
 export default function ThemeButton() {
+  const [checked, setChecked] = useState(false);
   const darkMode = useTheme();
   const toggleDarkTheme = useThemeUpdate();
   return (
-    <button className={darkMode ? 'theme-btn dark' : 'theme-btn'} onClick={toggleDarkTheme}>
-      Theme Changer
-    </button>
+    <div className="theme-btn">
+      { darkMode ? <ModeNightIcon sx={{color: '#9c7cac', marginRight: '4rem'}}/> : <WbSunnyIcon sx={{color: '#FAFAFA', marginRight: '4rem'}}/> }
+      <input
+        type="checkbox"
+        value={checked}
+        onChange={toggleDarkTheme}
+        className={darkMode ? 'dark' : 'checkbox'}
+      />
+    </div>
   )
 }

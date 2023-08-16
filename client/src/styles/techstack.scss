@@ -10,7 +10,7 @@ $black-to-purple: linear-gradient(to right, #202123, #9c7cac);
 $purple: #9c7cac;
 
 .tech-stack {
-  height: 100vh;
+  height: 110vh;
   width: 100vw;
   background-color: $appleWhite;
   position: relative;
@@ -38,7 +38,10 @@ $purple: #9c7cac;
     justify-content: space-around;
     align-items: center;
     height: 90%;
-    width: 100%;
+    padding: 0 8%;
+    @media screen and (max-width: 900px) {
+      padding: 0;
+    }
   }
 }
 
