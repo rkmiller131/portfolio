@@ -42,7 +42,7 @@ export default function NavMobile() {
       <List>
       {['Home', 'Projects', 'About', 'Contact'].map((text, index) => (
         <ListItem key={text} disablePadding>
-          <ListItemButton onClick={() => (document.getElementById(`#${text.toLowerCase()}`).scrollIntoView())}>
+          <ListItemButton onClick={() => (document.getElementById(`${text.toLowerCase()}`).scrollIntoView())}>
             <ListItemText
               primaryTypographyProps={{ style: styles.items }}
               primary={text}

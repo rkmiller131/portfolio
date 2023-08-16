@@ -25,7 +25,6 @@ export default function MuiMediaCard({ project }) {
           alt="project prieview video"
           height="200"
           src={project.src}
-          autoPlay
           controls
           sx={{
             "@media (max-width: 450px)": {

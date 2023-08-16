@@ -15,10 +15,10 @@ export default function Hero() {
       <div className="white-grid"></div>
       <div className="hero-content-container">
         <div className="hero-column">
-          <div className="hero-left">
+          <article className="hero-left">
             <p className="hero-title anim-typewriter">Hi, I'm Rachel</p>
             <p className="hero-subtitle">Full Stack Software Engineer</p>
-          </div>
+          </article>
         </div>
         <div className="hero-column">
           <div className="hero-right">
