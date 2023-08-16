@@ -17,7 +17,9 @@ export default function Contact() {
           LEFTY
         </div>
         <div className={darkMode ? 'contact-column-right dark' : 'contact-column-right'}>
-          RIGHTY
+          <div className={darkMode ? 'link-tab dark' : 'link-tab'}>{'>'}<a href="https://www.linkedin.com/in/rachel-miller-mlr/" target="blank">LinkedIn</a></div>
+          <div className={darkMode ? 'link-tab dark' : 'link-tab'}>{'>'}<a href="https://github.com/rkmiller131" target="blank">Github</a></div>
+          <img src="https://res.cloudinary.com/dnr41r1lq/image/upload/v1692225003/112_ftlggu.png" alt="blonde chibi taking notes" />
         </div>
       </div>
 

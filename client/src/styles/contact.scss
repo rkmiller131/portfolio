@@ -57,7 +57,29 @@ $charcoal: #202123;
       border-radius: 0 1rem 1rem 0;
       background: $pink-to-purple;
       display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
       flex-basis: 40%;
+      img {
+        height: 135px;
+        width: 135px;
+        position: absolute;
+        bottom: 0;
+        right: 85%;
+        @media screen and (max-width: 900px) {
+          right: 0;
+          border-radius: 0 0 1rem 0;
+        }
+        @media screen and (max-width: 600px) {
+          height: 112px;
+          width: 112px;
+        }
+        @media screen and (max-width: 450px) {
+          height: 90px;
+          width: 90px;
+        }
+      }
       &.dark {
         background: $purple;
       }
@@ -71,6 +93,10 @@ $charcoal: #202123;
     align-self: flex-start;
     padding: 3% 13%;
     font-size: 18px;
+    @media screen and (max-width: 450px) {
+      font-size: 16px;
+      align-self: center;
+    }
     &.dark {
       color: $appleWhite;
     }
@@ -83,6 +109,9 @@ $charcoal: #202123;
     font-size: 12px;
     font-family: 'Roboto', sans-serif;
     color: rgba(94,37,60, 0.5);
+    @media screen and (max-width: 450px) {
+      text-align: center;
+    }
     a {
       color: rgba(156,124,172, 0.8);
     }
