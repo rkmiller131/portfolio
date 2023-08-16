@@ -68,7 +68,9 @@ export default function MuiMediaCard({ project }) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" sx={{ color: "#eda0c5", textDecoration: "underline" }}>Github</Button>
+        <a href={project.github} target="blank">
+          <Button size="small" sx={{ color: "#eda0c5", textDecoration: "underline" }}>Github</Button>
+        </a>
       </CardActions>
     </Card>
   )
