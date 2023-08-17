@@ -9,6 +9,8 @@ $bubble: rgba(7, 0, 0, 0.25);
 // Dark mode variables
 $black-to-purple: linear-gradient(#202123, #9c7cac);
 $purple-to-black: linear-gradient(#9c7cac, #202123);
+$darkbtnbg: linear-gradient(to right, #9b98ca, #9c7cac);
+$reversedarkbtn: linear-gradient(to right, #9c7cac, #9b98ca);
 $purple: #9c7cac;
 $charcoal: #202123;
 
@@ -211,10 +213,10 @@ html {
   overflow: hidden;
   &.dark {
     border-color: #3E3744;
-    background: $purple;
+    background: $darkbtnbg;
     &:hover {
       border-color: #3E3744;
-      background: $purple;
+      background: $reversedarkbtn;
     }
   }
   @media screen and (max-width: 900px) {
