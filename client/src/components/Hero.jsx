@@ -9,7 +9,7 @@ import Navbar from './Navbar.jsx';
 export default function Hero() {
   const darkMode = useTheme();
   return (
-    <section className={`${darkMode ? "hero-section dark" : "hero-section"}`} id="home">
+    <section className={darkMode ? 'hero-section dark' : 'hero-section'} id="home">
       <Navbar />
       <ThemeButton />
       <div className="white-grid"></div>
