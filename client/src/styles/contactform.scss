@@ -1,0 +1,47 @@
+$red: #5e253c;
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  .indent {
+    align-self: flex-end;
+    margin-right: 10px;
+    @media screen and (max-width: 1200px) {
+      margin-right: 15px;
+    }
+  }
+  label {
+    font-size: 36px;
+    color: $red;
+    margin: 8px 0;
+    @media screen and (max-width: 1200px) {
+      font-size: 26px;
+      margin: 15px 0;
+    }
+  }
+  input {
+    margin: 8px 0;
+    height: 30px;
+    width: 300px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    border-bottom: 4px dashed $red;
+    @media screen and (max-width: 1200px) {
+      width: 250px;
+      margin: 10px 0;
+    }
+  }
+  textarea {
+    font-size: 20px;
+    margin: 8px 0;
+    height: 40px;
+    width: 350px;
+    background: none;
+    border: none;
+    border-bottom: 4px dashed $red;
+    @media screen and (max-width: 1200px) {
+      width: 250px;
+    }
+  }
+}
