@@ -1,4 +1,5 @@
 import React from 'react';
+import emailjs from '@emailjs/browser';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import ContactForm from './ContactForm.jsx';
@@ -10,8 +11,19 @@ import '../styles/contactform.scss';
 import '../styles/contact.scss';
 
 function submitForm(details) {
-  console.log('submitting form');
-  console.log(details);
+  const message = `Hello there, my name is ${details.user_name}. I'm reaching out because ${details.input1}. If I were a bug, I would be: >> ${details.input2}. << Anyways, you can reach me at ${details.user_email}.`;
+  const templateParams = {
+    user_name: details.user_name,
+    user_email: details.user_email,
+    message: message
+  };
+  emailjs.send('service_pyjzf4d', 'template_aig3nmf', templateParams, 'zld5m_PN1O1qXgvPS')
+    .then((response) => {
+      alert('Thanks! We\'ll be in touch.');
+    })
+    .catch((error) => {
+      alert('Oops! Something went wrong. Please try again.');
+    })
 }
 
 export default function Contact() {
