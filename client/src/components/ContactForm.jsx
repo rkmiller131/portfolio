@@ -33,7 +33,7 @@ export default function ContactForm({ submitForm }) {
       <label className={darkMode ? 'indent dark' : 'indent'}>If I were a bug<FontAwesomeIcon icon={faBug}/>, I would be</label>
       <textarea className={darkMode ? 'indent dark' : 'indent'} type="text" name="input2" onChange={handleChange} />
       <label className={darkMode ? 'dark' : ''}>Anyways, you can reach me at:</label>
-      <input className={darkMode ? 'dark' : ''} type="email" name="user_email" onChange={handleChange} />
+      <input className={darkMode ? 'dark' : ''} type="email" placeholder='yourEmail@email.com' name="user_email" onChange={handleChange} />
     </form>
   )
 }

@@ -38,6 +38,9 @@ $softerWhite: #f6f1f4;
     &.dark {
       color: $blue;
     }
+    @media screen and (max-width: 1400px) {
+      margin: 0;
+    }
     @media screen and (max-width: 1300px) {
       font-size: 26px;
       margin: 15px 0;
