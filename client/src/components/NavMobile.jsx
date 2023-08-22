@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTheme } from '../DarkThemeContext.jsx';
 import { Drawer, IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -14,6 +14,16 @@ import '../styles/navmobile.scss';
 export default function NavMobile() {
   const [toggleDrawer, setToggleDrawer] = useState(false);
   const darkMode = useTheme();
+
+  useEffect(() => {
+    function handler() {
+      setToggleDrawer(false);
+    }
+    document.addEventListener('mousedown', handler);
+
+    return () => document.removeEventListener('mousedown', handler);
+
+  })
 
   const styles = {
     menu: {
