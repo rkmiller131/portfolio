@@ -1,57 +1,52 @@
+// Light Mode Variables
 $appleWhite: #FAFAFA;
+$red: #5e253c;
+$pink: #eda0c5;
+
+// Dark Mode Variables
 $charcoal: #202123;
 $purple: #9c7cac;
 
-.toolbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
+// parent is .hero-section; % based off 100% width and 100vh
+.nav {
   background: linear-gradient($purple, transparent);
-  z-index: 100;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 25px;
-  @media screen and (max-width: 400px) {
-    padding: 10px;
+  position: fixed;
+  z-index: 2;
+  .logo, .navigation-links{
+    margin: 1% 5%;
   }
   img {
-    height: 3.5rem;
-    @media screen and (max-width: 900px) {
+    height: 3.25rem;
+    @media screen and (max-height: 770px) {
       height: 3rem;
     }
-    @media screen and (max-width: 450px) {
-      height: 2.5rem;
+    @media screen and (max-width: 420px) {
+      height: 2rem;
     }
   }
   nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    @media screen and (max-width: 670px) {
+    gap: 2rem;
+    @media screen and (max-width: 750px) {
       visibility: hidden;
     }
-    li {
-      display: inline-block;
-      a {
-        display: block;
-        color: $appleWhite;
-        text-decoration: none;
-        font-size: 1.5rem;
-        padding: 10px;
-        &:hover {
-          color: #5e253c;
-        }
+    li a {
+      color: $appleWhite;
+      text-decoration: none;
+      font-size: 1.5rem;
+      &:hover {
+        color: #5e253c;
       }
     }
   }
   &.dark {
     background: linear-gradient($charcoal, transparent);
-    nav ul li a {
+    li a {
       color: $purple;
       &:hover {
         color: $appleWhite;

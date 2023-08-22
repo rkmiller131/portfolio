@@ -1,51 +1,51 @@
-.theme-icon {
-  position: fixed;
-  right: 8%;
-  top: 10%;
-  color: #FAFAFA;
-  &.dark {
-    color: #9c7cac;
-  }
-}
-.theme-btn {
-  position: fixed;
-  z-index: 100;
-  right: 3%;
-  top: 10%;
-  input {
-    position: fixed;
-    z-index: 100;
-    width: 55px;
-    height: 25px;
-    border-radius: 25px;
-    right: 3%;
-    top: 10%;
-    background: rgba(7, 0, 0, 0.25);
-    transition: background 0.3s ease;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    appearance: none;
-    &.dark {
-      background: #3E3744;
-      &:after {
-        left: 55%;
-        background-color: #9c7cac;
-      }
-    }
-    &:after {
-      content: '';
-      position: absolute;
-      background-color: #FAFAFA;
-      width: 1.25rem;
-      height: 1.25rem;
-      border-radius: 55%;
-      top: 9%;
-      left: 8%;
-      transition: left 0.3s;
-    }
-    @media screen and (max-width: 450px) {
-      top: 10vh;
-    }
-  }
-}
+// .theme-icon {
+//   position: fixed;
+//   right: 8%;
+//   top: 10%;
+//   color: #FAFAFA;
+//   &.dark {
+//     color: #9c7cac;
+//   }
+// }
+// .theme-btn {
+//   position: fixed;
+//   z-index: 100;
+//   right: 3%;
+//   top: 10%;
+//   input {
+//     position: fixed;
+//     z-index: 100;
+//     width: 55px;
+//     height: 25px;
+//     border-radius: 25px;
+//     right: 3%;
+//     top: 10%;
+//     background: rgba(7, 0, 0, 0.25);
+//     transition: background 0.3s ease;
+//     -webkit-appearance: none;
+//     -moz-appearance: none;
+//     -ms-appearance: none;
+//     appearance: none;
+//     &.dark {
+//       background: #3E3744;
+//       &:after {
+//         left: 55%;
+//         background-color: #9c7cac;
+//       }
+//     }
+//     &:after {
+//       content: '';
+//       position: absolute;
+//       background-color: #FAFAFA;
+//       width: 1.25rem;
+//       height: 1.25rem;
+//       border-radius: 55%;
+//       top: 9%;
+//       left: 8%;
+//       transition: left 0.3s;
+//     }
+//     @media screen and (max-width: 450px) {
+//       top: 10vh;
+//     }
+//   }
+// }

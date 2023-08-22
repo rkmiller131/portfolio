@@ -24,7 +24,7 @@ export default function NavMobile() {
       fontFamily: 'Play',
       fontSize: '22px',
       padding: '10px',
-      borderBottom: '1px solid white'
+      borderBottom: darkMode ? '1px solid white' : '1px solid #5e253c'
     }
   }
 
@@ -64,8 +64,8 @@ export default function NavMobile() {
           elevation: 8,
           sx: {
             width: 240,
-            color: '#FAFAFA',
-            backgroundColor: '#9c7cac'
+            color: darkMode ? '#FAFAFA' : '#5e253c',
+            backgroundColor: darkMode ? '#202123' : '#FAFAFA'
           }
         }}
         anchor='right'
