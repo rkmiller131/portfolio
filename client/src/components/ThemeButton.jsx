@@ -11,14 +11,16 @@ export default function ThemeButton() {
   const darkMode = useTheme();
   const toggleDarkTheme = useThemeUpdate();
   return (
-    <div className="theme-btn">
-      { darkMode ? <ModeNightIcon sx={{color: '#9c7cac'}}/> : <WbSunnyIcon sx={{color: '#FAFAFA'}}/> }
-      <input
-        type="checkbox"
-        value={checked}
-        onChange={toggleDarkTheme}
-        className={darkMode ? 'dark' : 'checkbox'}
-      />
+    <div className="theme-btn-container">
+      <div className="theme-btn">
+        { darkMode ? <ModeNightIcon sx={{color: '#9c7cac'}}/> : <WbSunnyIcon sx={{color: '#FAFAFA'}}/> }
+        <input
+          type="checkbox"
+          value={checked}
+          onChange={toggleDarkTheme}
+          className={darkMode ? 'dark' : 'checkbox'}
+        />
+      </div>
     </div>
   )
 }

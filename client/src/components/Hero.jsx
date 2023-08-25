@@ -23,25 +23,22 @@ export default function Hero() {
         <div className="hero-column">
           <div className="hero-right">
             <div className={`${darkMode ? "character-backdrop dark" : "character-backdrop"}`}>
-              {darkMode ?
+              {/* {darkMode ?
                 <img className="character" src="https://res.cloudinary.com/dnr41r1lq/image/upload/v1691888601/300_2_cinamx.png" alt="blonde haired chibi girl with devil horns and hands together"/>
                 :
                 <img className="character" src="https://res.cloudinary.com/dnr41r1lq/image/upload/v1691605496/300__1_mi9t2u.png" alt="blonde haired chibi girl holding a giant pink heart"/>
-              }
+              } */}
             </div>
           </div>
         </div>
       </div>
-      <div className={darkMode ? 'hero-slant dark' : 'hero-slant'}>
+      <div className={`${darkMode ? "hero-slant dark" : "hero-slant"}`}>
         <a href="https://app.box.com/s/kjxbe409i76g3mi6v62feikjx4kxuu8p" target="blank">
           <button className={darkMode ? 'hero-btn dark' : 'hero-btn'}>
             <FontAwesomeIcon icon={faDownload} className="hero-btn-icon" />
             Resume
           </button>
         </a>
-      </div>
-      <div className="hero-slant-edge-container">
-        <div className={darkMode ? 'hero-slant-edge dark' : 'hero-slant-edge'} />
       </div>
     </section>
   )
