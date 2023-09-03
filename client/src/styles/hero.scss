@@ -39,6 +39,17 @@ body {
   font-family: $font-primary;
 }
 
+p {
+  margin: 0;
+}
+
+main {
+  background: $appleWhite;
+  &.dark {
+    background: $charcoal;
+  }
+}
+
 .hero-section {
   display: flex;
   flex-direction: column;
@@ -48,6 +59,7 @@ body {
   height: 100vh;
   color: $appleWhite;
   background: $pink-to-purple;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 45% 100%, 34% 82%, 0 82%);
 
   &.dark {
     background: $black-to-purple;
@@ -64,12 +76,13 @@ body {
   }
 
   .hero-content-container {
-    border: 2px solid red;
     display: flex;
-    flex: 1;
-    margin-top: 30vh;
-    // width: 100%;
-    @media screen and (max-width: 770px) {
+    flex-direction: row;
+    width: 75%;
+    height: 50%;
+    margin-top: 25vh;
+    z-index: 2;
+    @media screen and (max-width: 1000px) {
       flex-direction: column-reverse;
     }
     .hero-column {
@@ -77,55 +90,44 @@ body {
       flex-basis: 50%;
       align-items: center;
       justify-content: center;
-      border: 2px solid yellow;
     }
-    // .hero-left,
-    // .hero-right {
-    //   display: flex;
-    //   flex-direction: column;
-    //   align-items: center;
-    //   flex: 1;
-    //   border: 2px solid yellow;
-    // }
     .hero-title,
     .hero-subtitle {
-      font-family: 'Play', sans-serif;
-      margin: 0;
+    font-family: 'Play', sans-serif;
     }
     .hero-title {
       color: $appleWhite;
-      font-size: 6rem;
+      font-size: 5.5rem;
       white-space: nowrap;
       overflow: hidden;
-      border-right: 3px solid $red;
-      @media screen and (max-width: 600px) {
-        font-size: 48px;
+      border-right: 3px solid #5e253c;
+      @media screen and (max-width: 1450px) {
+        font-size: 5rem;
+      }
+      @media screen and (max-width: 1200px) {
+        font-size: 4rem;
+      }
+      @media screen and (max-width: 1000px) {
+        font-size: 5.5rem;
+      }
+      @media screen and (max-width: 770px) {
+        font-size: 4rem;
       }
     }
     .anim-typewriter {
       animation: typewriter 2s steps(44) 1s 1 normal both,
         blinkTextCursor 500ms steps(44) infinite normal;
-        &.dark {
-          animation: typewriter 2s steps(44) 1s 1 normal both,
-          blinkTextCursorDark 500ms steps(44) infinite normal;
-        }
-      }
-
+    }
     @keyframes typewriter {
       from { width: 0; }
       to { width: 100%; }
     }
     @keyframes blinkTextCursor {
-      from { border-right-color: $red; }
+      from { border-right-color: #5e253c; }
       to { border-right-color: transparent; }
     }
-    @keyframes blinkTextCursorDark {
-      from { border-right-color: $pink; }
-      to { border-right-color: transparent; }
-    }
-
     .hero-subtitle {
-      color: rgba(250, 250, 250, 0.75);
+      color: rgba(250, 250, 250, 0.8);
       font-size: 2.25rem;
       letter-spacing: 0.15rem;
       animation-name: fade-in;
@@ -135,15 +137,148 @@ body {
         60% { opacity: 0; }
         100% { opacity: 1; }
       }
-      @media screen and (max-width: 600px) {
-        font-size: 22px;
-        text-align: center;
+      @media screen and (max-width: 1450px) {
+        font-size: 2rem;
+      }
+      @media screen and (max-width: 1200px) {
+        font-size: 1.5rem;
+      }
+      @media screen and (max-width: 1000px) {
+        font-size: 2.25rem;
+      }
+      @media screen and (max-width: 770px) {
+        font-size: 1.5rem;
       }
     }
     .hero-right {
+      display: flex;
       background-color: $bubble;
+      height: 95%;
+      width: 95%;
+      border-radius: 8%;
+      align-items: center;
+      justify-content: center;
+      @media screen and (max-width: 1200px) {
+        height: 85%;
+      }
+      @media screen and (max-width: 1000px) {
+        height: 125%;
+        width: 75%;
+      }
+      @media screen and (max-width: 770px) {
+        width: 95%;
+      }
+      .character-backdrop {
+        background-color: $pink;
+        border-radius: 1rem 1rem;
+        height: 50%;
+        width: 75%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &.dark {
+          background-color: $purple;
+        }
+        @media screen and (max-width: 1200px) {
+          width: 80%;
+        }
+        @media screen and (max-width: 600px) {
+          width: 70%;
+        }
+        .character {
+          height: 300px;
+          width: 300px;
+          @media screen and (max-width: 600px) {
+            height: 225px;
+            width: 225px;
+          }
+        }
+      }
     }
   }
+
+  // .hero-content-container {
+  //   border: 2px solid red;
+  //   display: flex;
+  //   // flex: 1;
+  //   margin-top: 25vh;
+  //   width: 100%;
+  //   padding: 0 10%;
+  //   @media screen and (max-width: 770px) {
+  //     flex-direction: column-reverse;
+  //   }
+  //   .hero-column {
+  //     display: flex;
+  //     flex-basis: 50%;
+  //     align-items: center;
+  //     justify-content: center;
+  //     border: 2px solid yellow;
+  //   }
+  //   // .hero-left,
+  //   // .hero-right {
+  //   //   display: flex;
+  //   //   flex-direction: column;
+  //   //   align-items: center;
+  //   //   flex: 1;
+  //   //   border: 2px solid yellow;
+  //   // }
+  //   .hero-title,
+  //   .hero-subtitle {
+  //     font-family: 'Play', sans-serif;
+  //     margin: 0;
+  //   }
+  //   .hero-title {
+  //     color: $appleWhite;
+  //     font-size: 6rem;
+  //     white-space: nowrap;
+  //     overflow: hidden;
+  //     border-right: 3px solid $red;
+  //     @media screen and (max-width: 600px) {
+  //       font-size: 48px;
+  //     }
+  //   }
+  //   .anim-typewriter {
+  //     animation: typewriter 2s steps(44) 1s 1 normal both,
+  //       blinkTextCursor 500ms steps(44) infinite normal;
+  //       &.dark {
+  //         animation: typewriter 2s steps(44) 1s 1 normal both,
+  //         blinkTextCursorDark 500ms steps(44) infinite normal;
+  //       }
+  //     }
+
+  //   @keyframes typewriter {
+  //     from { width: 0; }
+  //     to { width: 100%; }
+  //   }
+  //   @keyframes blinkTextCursor {
+  //     from { border-right-color: $red; }
+  //     to { border-right-color: transparent; }
+  //   }
+  //   @keyframes blinkTextCursorDark {
+  //     from { border-right-color: $pink; }
+  //     to { border-right-color: transparent; }
+  //   }
+
+  //   .hero-subtitle {
+  //     color: rgba(250, 250, 250, 0.75);
+  //     font-size: 2.25rem;
+  //     letter-spacing: 0.15rem;
+  //     animation-name: fade-in;
+  //     animation-duration: 5s;
+  //     @keyframes fade-in{
+  //       0% { opacity: 0; }
+  //       60% { opacity: 0; }
+  //       100% { opacity: 1; }
+  //     }
+  //     @media screen and (max-width: 600px) {
+  //       font-size: 22px;
+  //       text-align: center;
+  //     }
+  //   }
+  //   .hero-right {
+  //     background-color: $bubble;
+  //   }
+  // }
 
   // #page-section {
   //   display: flex;
