@@ -34,7 +34,7 @@ export default function NavMobile() {
       fontFamily: 'Play',
       fontSize: '22px',
       padding: '10px',
-      borderBottom: darkMode ? '1px solid white' : '1px solid #5e253c'
+      borderBottom: darkMode ? '1px solid #FAFAFA' : '1px solid #5e253c'
     }
   }
 
@@ -66,7 +66,7 @@ export default function NavMobile() {
 
   return (
     <>
-      <IconButton sx={{position: 'fixed', right: '2%'}} aria-label='menu' className='menu' onClick={() => setToggleDrawer(true)}>
+      <IconButton sx={{position: 'absolute', right: '4%', top: '10%'}} aria-label='menu' className='menu' onClick={() => setToggleDrawer(true)}>
         <MenuIcon className={darkMode ? 'navburger dark' : 'navburger'} fontSize='large'/>
       </IconButton>
       <Drawer

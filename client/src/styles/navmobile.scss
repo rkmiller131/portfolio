@@ -9,16 +9,12 @@ $purple: #9c7cac;
 
 .menu {
   visibility: hidden;
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 900px) {
     visibility: visible;
   }
 }
 .navburger {
   color: $red;
-  visibility: hidden;
-  @media screen and (max-width: 750px) {
-    visibility: visible;
-  }
   &.dark {
     color: $purple;
   }

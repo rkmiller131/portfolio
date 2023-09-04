@@ -3,18 +3,14 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 0 5%;
-  margin-top: 10vh;
-  position: fixed;
-  z-index: 5;
-  @media screen and (max-width: 450px) {
-    margin-top: 8vh;
-    padding: 0 4%;
-  }
+  padding: 0 5% 2% 0;
   .theme-btn {
     display: flex;
     align-items: center;
     svg {
+      @media screen and (max-width: 750px) {
+        font-size: 1.3rem;
+      }
       @media screen and (max-width: 370px) {
         height: 1.2rem;
       }
@@ -36,6 +32,9 @@
         &:after {
           left: 55%;
           background-color: #9c7cac;
+          @media screen and (max-width: 750px) {
+            left: 60%;
+          }
         }
       }
       &:after {

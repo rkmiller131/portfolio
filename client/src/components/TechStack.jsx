@@ -12,12 +12,12 @@ export default function TechStack() {
 
   return (
     <section id="about" className={darkMode ? 'tech-stack dark' : 'tech-stack'}>
-      <div className="tech-stack-container">
+      {/* <div className="tech-stack-container">
         <h2 className={darkMode ? 'tech-stack-text dark' : 'tech-stack-text'}>
           Tech Stack
         </h2>
         {sections.map((section, i) => <TechStackItem section={section} key={i}/>)}
-      </div>
+      </div> */}
     </section>
   )
 }
