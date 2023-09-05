@@ -15,6 +15,7 @@ $darkbtnbg: linear-gradient(to right, #9b98ca, #9c7cac);
 $reversedarkbtn: linear-gradient(to right, #9c7cac, #9b98ca);
 $purple: #9c7cac;
 $charcoal: #202123;
+$blue: #9b98ca;
 
 // Typography
 $font-primary: 'Jua', sans-serif;
@@ -53,7 +54,6 @@ p {
     background-color: $charcoal;
   }
   .hero-bg {
-    // position: absolute;
     width: 100%;
     height: 100%;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 45% 100%, 34% 82%, 0 82%);
@@ -89,205 +89,218 @@ p {
           clip-path: polygon(0 0, 100% 0, 100% 100%, 72% 100%, 40% 85%, 0 85%);
         }
     }
-  }
-  .button-container {
-    // height: 17%;
-    // width: 33%;
-    // position: absolute;
-    // bottom: 0;
-    // padding: 2% 0;
-    .hero-btn {
-      position: absolute;
-      left: 10%;
-      bottom: 3%;
-      height: 6.6rem;
-      width: 20rem;
-      border: 4px solid #5e253c;
-      border-radius: 4rem 4rem;
-      background: $buttonbg;
+    // MAIN HERO CONTENT (HI IM RACHEL CHIBI)
+    .hero-content-container {
+      width: 100%;
+      height: 100%;
+      // position: relative;
+      padding: 15%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       color: $appleWhite;
-      font-size: 30px;
-      z-index: 10;
-      overflow: hidden;
-      // desktop responsiveness
-      @media screen and (max-height: 1180px) {
-        height: 6rem;
-        width: 16rem;
-        font-size: 28px;
+      font-family: 'Play', sans-serif;
+      .column {
+        border: 2px solid red;
+        display: flex;
+        flex: 1;
+        margin: 1%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
       }
-      @media screen and (max-height: 770px) {
-        height: 5rem;
-        width: 13rem;
-        font-size: 24px;
-      }
-      // ipads and tablets
-      @media screen and (max-width: 915px) {
-        left: 4%;
-        height: 6rem;
-        width: 16rem;
-      }
-      @media screen and (max-width: 600px), (max-device-width: 750px) {
-        height: 4rem;
-        width: 10rem;
-      }
-      // mobile responsiveness
-      @media screen and (max-width: 450px){
-        height: 3.5rem;
-        width: 9rem;
-        font-size: 20px;
-        left: 5%;
-        border-width: 3px;
-      }
-      @media screen and (max-height: 450px) {
-        height: 3rem;
-        width: 10rem;
-        left: 10%;
-        border-width: 3px;
-      }
-      @media screen and (max-height: 375px) {
-        height: 2.5rem;
-        width: 8rem;
-        font-size: 18px;
-      }
-      @media screen and (max-width: 320px){
-        height: 3rem;
-        width: 7rem;
-        font-size: 16px;
-      }
-      @media screen and (max-height: 320px) {
-        left: 5%;
-      }
-      &.dark {
-        border-color: #3E3744;
-        background: $darkbtnbg;
-        &:hover {
-          border-color: #3E3744;
-          background: $reversedarkbtn;
+      .hero-left {
+        flex-direction: column;
+        .hero-title {
+          font-size: 6.3rem;
+          white-space: nowrap;
+          overflow: hidden;
+          border-right: 4px solid $red;
+        }
+        .anim-typewriter {
+          animation: typewriter 2s steps(44) 1s 1 normal both,
+            blinkTextCursor 500ms steps(44) infinite normal;
+            &.dark {
+              animation: typewriter 2s steps(44) 1s 1 normal both,
+              blinkTextDarkCursor 500ms steps(44) infinite normal;
+            }
+          }
+        @keyframes typewriter {
+          from { width: 0; }
+          to { width: 100%; }
+        }
+        @keyframes blinkTextCursor {
+          from { border-right-color: $red; }
+          to { border-right-color: transparent; }
+        }
+        @keyframes blinkTextDarkCursor {
+          from { border-right-color: $blue; }
+          to { border-right-color: transparent; }
+        }
+        .hero-subtitle {
+          color: rgba(250, 250, 250, 0.8);
+          font-size: 2.5rem;
+          letter-spacing: 0.15rem;
+          animation-name: fade-in;
+          animation-duration: 5s;
+          @keyframes fade-in{
+            0% { opacity: 0; }
+            60% { opacity: 0; }
+            100% { opacity: 1; }
+          }
         }
       }
-      &:before {
-        content: '';
-        position: absolute;
-        height: 110px;
-        width: 22px;
-        background: #fff;
-        box-shadow: 0 0 10px #fff;
-        filter: blur(2px);
-        opacity: 0.7;
-        top: -22px;
-        transition: 0.3s;
-        transform: rotate(-20deg) translateX(-87px);
-      }
-      &:hover {
-        background: $hoverbuttonbg;
-        border: 4px solid #5e253c;
-        &::before{
-          transform: rotate(-20deg) translate(195px, 78px);
+      .hero-right {
+        background: $bubble;
+        border-radius: 8%;
+        &::before {
+          content: '';
+          position: absolute;
+          height: 50%;
+          width: 75%;
+          background: $pink;
+          border-radius: 1rem 1rem;
         }
-      }
-      &:active {
-        background: #8c89b6;
-      }
-      .hero-btn-icon {
-        background: transparent;
-        color: $appleWhite;
-        font-size: 28px;
-        margin-right: 15px;
-        @media screen and (max-width: 900px) {
-          font-size: 20px;
-          margin-right: 10px;
+        &::after {
+          content: url("https://res.cloudinary.com/dnr41r1lq/image/upload/v1691605496/300__1_mi9t2u.png");
+          position: absolute;
+          transform: scale(1.2);
         }
-        @media screen and (max-width: 600px) {
-          font-size: 18px;
-          margin-right: 8px;
+        &.dark {
+          &::before {
+            background: $purple;
+          }
+          &::after {
+            content: url("https://res.cloudinary.com/dnr41r1lq/image/upload/v1691888601/300_2_cinamx.png");
+          }
         }
       }
     }
   }
-  // .hero-btn {
-  //   position: absolute;
-  //   // bottom: 0;
-  //   // left: 12%;
-  //   height: 6rem;
-  //   width: 16rem;
-  //   border: 4px solid #5e253c;
-  //   border-radius: 4rem 4rem;
-  //   background: $buttonbg;
-  //   color: $appleWhite;
-  //   font-size: 28px;
-  //   z-index: 10;
-  //   overflow: hidden;
-  //   &.dark {
-  //     border-color: #3E3744;
-  //     background: $darkbtnbg;
-  //     &:hover {
-  //       border-color: #3E3744;
-  //       background: $reversedarkbtn;
-  //     }
-  //   }
-  //   @media screen and (max-width: 900px) {
-  //     height: 5rem;
-  //     width: 14rem;
-  //     font-size: 24px;
-  //     border-radius: 3rem 3rem;
-  //     border-width: 3px;
-  //     top: 30%;
-  //   }
-  //   @media screen and (max-width: 600px) {
-  //     height: 4rem;
-  //     width: 10rem;
-  //     font-size: 20px;
-  //     border-radius: 2rem 2rem;
-  //   }
-  //   @media screen and (max-width: 500px) {
-  //     height: 3.5rem;
-  //     width: 9rem;
-  //     font-size: 18px;
-  //     top: 35%;
-  //   }
-  //   @media screen and (max-width: 400px) {
-  //     height: 3rem;
-  //     width: 8rem;
-  //     font-size: 16px;
-  //     top: 40%;
-  //     left: 10%;
-  //   }
-  //   &:before {
-  //     content: '';
-  //     position: absolute;
-  //     height: 100px;
-  //     width: 22px;
-  //     background: #fff;
-  //     box-shadow: 0 0 10px #fff;
-  //     filter: blur(2px);
-  //     opacity: 0.7;
-  //     top: -22px;
-  //     transition: 0.3s;
-  //     transform: rotate(-20deg) translateX(-60px);
-  //   }
-  //   &:hover {
-  //     background: $hoverbuttonbg;
-  //     border: 4px solid #5e253c;
-  //     &::before{
-  //       transform: rotate(-20deg) translate(155px, 70px);
-  //     }
-  //   }
-  //   &:active {
-  //     background: #8c89b6;
-  //   }
-  //   .hero-btn-icon {
-  //     background: transparent;
-  //     color: $appleWhite;
-  //     font-size: 28px;
-  //     margin-right: 15px;
-  //     @media screen and (max-width: 900px) {
-  //       font-size: 20px;
-  //       margin-right: 10px;
-  //     }
-  //     @media screen and (max-width: 600px) {
-  //       font-size: 18px;
-  //       margin-right: 8px;
-  //     }
-  //   }
-  // }
+  // JUST THE RESUME BUTTON ON HERO SLANT
+  .hero-btn {
+    position: absolute;
+    left: 10%;
+    bottom: 3%;
+    height: 6.6rem;
+    width: 20rem;
+    border: 4px solid #5e253c;
+    border-radius: 4rem 4rem;
+    background: $buttonbg;
+    color: $appleWhite;
+    font-size: 30px;
+    z-index: 10;
+    overflow: hidden;
+    // desktop responsiveness
+    @media screen and (max-height: 1180px) {
+      height: 6rem;
+      width: 16rem;
+      font-size: 28px;
+    }
+    @media screen and (min-width: 1900px) {
+      height: 8rem;
+      width: 23rem;
+      font-size: 42px;
+    }
+    @media screen and (max-height: 770px) {
+      height: 5rem;
+      width: 13rem;
+      font-size: 24px;
+    }
+    // ipads and tablets
+    @media screen and (max-width: 915px) {
+      left: 4%;
+      height: 6rem;
+      width: 16rem;
+    }
+    @media screen and (max-width: 600px), (max-device-width: 750px) {
+      height: 4rem;
+      width: 10rem;
+    }
+    // mobile responsiveness
+    @media screen and (max-width: 450px){
+      height: 3.5rem;
+      width: 9rem;
+      font-size: 20px;
+      left: 5%;
+      border-width: 3px;
+    }
+    @media screen and (max-height: 450px) {
+      height: 3rem;
+      width: 10rem;
+      left: 10%;
+      border-width: 3px;
+    }
+    @media screen and (max-height: 375px) {
+      height: 2.5rem;
+      width: 8rem;
+      font-size: 18px;
+    }
+    @media screen and (max-width: 320px){
+      height: 3rem;
+      width: 7rem;
+      font-size: 16px;
+    }
+    @media screen and (max-height: 320px) {
+      left: 5%;
+    }
+    &.dark {
+      border-color: #3E3744;
+      background: $darkbtnbg;
+      &:hover {
+        border-color: #3E3744;
+        background: $reversedarkbtn;
+      }
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      height: 110px;
+      width: 22px;
+      background: #fff;
+      box-shadow: 0 0 10px #fff;
+      filter: blur(2px);
+      opacity: 0.7;
+      top: -22px;
+      transition: 0.3s;
+      transform: rotate(-20deg) translateX(-87px);
+      @media screen and (min-width: 1900px) {
+        height: 135px;
+        top: -2px;
+        transform: rotate(-20deg) translateX(-77px);
+      }
+    }
+    &:hover {
+      background: $hoverbuttonbg;
+      border: 4px solid #5e253c;
+      &::before{
+        transform: rotate(-20deg) translate(195px, 78px);
+        @media screen and (min-width: 1900px) {
+          transform: rotate(-20deg) translate(254px, 78px);
+        }
+      }
+    }
+    &:active {
+      background: #8c89b6;
+    }
+    .hero-btn-icon {
+      background: transparent;
+      color: $appleWhite;
+      font-size: 28px;
+      margin-right: 15px;
+      @media screen and (max-width: 900px) {
+        font-size: 20px;
+        margin-right: 10px;
+      }
+      @media screen and (max-width: 600px) {
+        font-size: 18px;
+        margin-right: 8px;
+      }
+      @media screen and (min-width: 1900px) {
+        font-size: 42px;
+      }
+    }
+  }
 }

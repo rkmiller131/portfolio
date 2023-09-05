@@ -13,15 +13,24 @@ export default function Hero() {
       <Navbar />
       <div className={darkMode ? "hero-bg dark": "hero-bg"}>
         <div className="white-grid" />
+        <div className="hero-content-container">
+          <article className="column hero-left">
+            <p className={darkMode ? "hero-title anim-typewriter dark" : "hero-title anim-typewriter"}>
+              Hi, I'm Rachel
+            </p>
+            <p className="hero-subtitle">
+              Full Stack Software Engineer
+            </p>
+          </article>
+          <div className={darkMode ? "column hero-right dark" : "column hero-right"} />
+        </div>
       </div>
-      <div className="button-container">
-        <a href="https://app.box.com/s/kjxbe409i76g3mi6v62feikjx4kxuu8p" target="blank">
-          <button className={darkMode ? 'hero-btn dark' : 'hero-btn'}>
-            <FontAwesomeIcon icon={faDownload} className="hero-btn-icon" />
-            Resume
-          </button>
-        </a>
-      </div>
+      <a href="https://app.box.com/s/kjxbe409i76g3mi6v62feikjx4kxuu8p" target="blank">
+        <button className={darkMode ? 'hero-btn dark' : 'hero-btn'}>
+          <FontAwesomeIcon icon={faDownload} className="hero-btn-icon" />
+          Resume
+        </button>
+      </a>
     </section>
   )
 }
@@ -53,12 +62,12 @@ export default function Hero() {
 //         </div>
 //       </div>
 //       <div className={`${darkMode ? "hero-slant dark" : "hero-slant"}`}>
-        // <a href="https://app.box.com/s/kjxbe409i76g3mi6v62feikjx4kxuu8p" target="blank">
-        //   <button className={darkMode ? 'hero-btn dark' : 'hero-btn'}>
-        //     <FontAwesomeIcon icon={faDownload} className="hero-btn-icon" />
-        //     Resume
-        //   </button>
-        // </a>
+//         <a href="https://app.box.com/s/kjxbe409i76g3mi6v62feikjx4kxuu8p" target="blank">
+//           <button className={darkMode ? 'hero-btn dark' : 'hero-btn'}>
+//             <FontAwesomeIcon icon={faDownload} className="hero-btn-icon" />
+//             Resume
+//           </button>
+//         </a>
 //       </div>
 //     </section>
 //   )
