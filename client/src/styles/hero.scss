@@ -44,8 +44,44 @@ p {
 }
 
 .hero-section {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  z-index: 1;
   background-color: $appleWhite;
   &.dark {
     background-color: $charcoal;
+  }
+  .hero-bg {
+    // position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 45% 100%, 34% 82%, 0 82%);
+    background: $pink-to-purple;
+    @media screen and (max-width: 1280px) {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 34% 80%, 0 80%);
+    }
+    @media screen and (max-width: 450px) {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 72% 100%, 40% 85%, 0 85%);
+    }
+    &.dark {
+      background: $black-to-purple;
+    }
+    .white-grid {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-size: 40px 40px;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.25) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 1px, transparent 1px);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 45% 100%, 34% 82%, 0 82%);
+        @media screen and (max-width: 1280px) {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 34% 80%, 0 80%);
+        }
+        @media screen and (max-width: 450px) {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 72% 100%, 40% 85%, 0 85%);
+        }
+    }
   }
 }
