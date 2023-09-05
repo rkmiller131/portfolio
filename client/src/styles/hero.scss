@@ -59,7 +59,10 @@ p {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 45% 100%, 34% 82%, 0 82%);
     background: $pink-to-purple;
     @media screen and (max-width: 1280px) {
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 34% 80%, 0 80%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 34% 82%, 0 82%);
+    }
+    @media screen and (max-width: 600px) {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 60% 100%, 33% 82%, 0 82%);
     }
     @media screen and (max-width: 450px) {
       clip-path: polygon(0 0, 100% 0, 100% 100%, 72% 100%, 40% 85%, 0 85%);
@@ -77,11 +80,214 @@ p {
         linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 1px, transparent 1px);
         clip-path: polygon(0 0, 100% 0, 100% 100%, 45% 100%, 34% 82%, 0 82%);
         @media screen and (max-width: 1280px) {
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 34% 80%, 0 80%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 34% 82%, 0 82%);
+        }
+        @media screen and (max-width: 600px) {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 60% 100%, 33% 82%, 0 82%);
         }
         @media screen and (max-width: 450px) {
           clip-path: polygon(0 0, 100% 0, 100% 100%, 72% 100%, 40% 85%, 0 85%);
         }
     }
   }
+  .button-container {
+    // height: 17%;
+    // width: 33%;
+    // position: absolute;
+    // bottom: 0;
+    // padding: 2% 0;
+    .hero-btn {
+      position: absolute;
+      left: 10%;
+      bottom: 3%;
+      height: 6.6rem;
+      width: 20rem;
+      border: 4px solid #5e253c;
+      border-radius: 4rem 4rem;
+      background: $buttonbg;
+      color: $appleWhite;
+      font-size: 30px;
+      z-index: 10;
+      overflow: hidden;
+      // desktop responsiveness
+      @media screen and (max-height: 1180px) {
+        height: 6rem;
+        width: 16rem;
+        font-size: 28px;
+      }
+      @media screen and (max-height: 770px) {
+        height: 5rem;
+        width: 13rem;
+        font-size: 24px;
+      }
+      // ipads and tablets
+      @media screen and (max-width: 915px) {
+        left: 4%;
+        height: 6rem;
+        width: 16rem;
+      }
+      @media screen and (max-width: 600px), (max-device-width: 750px) {
+        height: 4rem;
+        width: 10rem;
+      }
+      // mobile responsiveness
+      @media screen and (max-width: 450px){
+        height: 3.5rem;
+        width: 9rem;
+        font-size: 20px;
+        left: 5%;
+        border-width: 3px;
+      }
+      @media screen and (max-height: 450px) {
+        height: 3rem;
+        width: 10rem;
+        left: 10%;
+        border-width: 3px;
+      }
+      @media screen and (max-height: 375px) {
+        height: 2.5rem;
+        width: 8rem;
+        font-size: 18px;
+      }
+      @media screen and (max-width: 320px){
+        height: 3rem;
+        width: 7rem;
+        font-size: 16px;
+      }
+      @media screen and (max-height: 320px) {
+        left: 5%;
+      }
+      &.dark {
+        border-color: #3E3744;
+        background: $darkbtnbg;
+        &:hover {
+          border-color: #3E3744;
+          background: $reversedarkbtn;
+        }
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        height: 110px;
+        width: 22px;
+        background: #fff;
+        box-shadow: 0 0 10px #fff;
+        filter: blur(2px);
+        opacity: 0.7;
+        top: -22px;
+        transition: 0.3s;
+        transform: rotate(-20deg) translateX(-87px);
+      }
+      &:hover {
+        background: $hoverbuttonbg;
+        border: 4px solid #5e253c;
+        &::before{
+          transform: rotate(-20deg) translate(195px, 78px);
+        }
+      }
+      &:active {
+        background: #8c89b6;
+      }
+      .hero-btn-icon {
+        background: transparent;
+        color: $appleWhite;
+        font-size: 28px;
+        margin-right: 15px;
+        @media screen and (max-width: 900px) {
+          font-size: 20px;
+          margin-right: 10px;
+        }
+        @media screen and (max-width: 600px) {
+          font-size: 18px;
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+  // .hero-btn {
+  //   position: absolute;
+  //   // bottom: 0;
+  //   // left: 12%;
+  //   height: 6rem;
+  //   width: 16rem;
+  //   border: 4px solid #5e253c;
+  //   border-radius: 4rem 4rem;
+  //   background: $buttonbg;
+  //   color: $appleWhite;
+  //   font-size: 28px;
+  //   z-index: 10;
+  //   overflow: hidden;
+  //   &.dark {
+  //     border-color: #3E3744;
+  //     background: $darkbtnbg;
+  //     &:hover {
+  //       border-color: #3E3744;
+  //       background: $reversedarkbtn;
+  //     }
+  //   }
+  //   @media screen and (max-width: 900px) {
+  //     height: 5rem;
+  //     width: 14rem;
+  //     font-size: 24px;
+  //     border-radius: 3rem 3rem;
+  //     border-width: 3px;
+  //     top: 30%;
+  //   }
+  //   @media screen and (max-width: 600px) {
+  //     height: 4rem;
+  //     width: 10rem;
+  //     font-size: 20px;
+  //     border-radius: 2rem 2rem;
+  //   }
+  //   @media screen and (max-width: 500px) {
+  //     height: 3.5rem;
+  //     width: 9rem;
+  //     font-size: 18px;
+  //     top: 35%;
+  //   }
+  //   @media screen and (max-width: 400px) {
+  //     height: 3rem;
+  //     width: 8rem;
+  //     font-size: 16px;
+  //     top: 40%;
+  //     left: 10%;
+  //   }
+  //   &:before {
+  //     content: '';
+  //     position: absolute;
+  //     height: 100px;
+  //     width: 22px;
+  //     background: #fff;
+  //     box-shadow: 0 0 10px #fff;
+  //     filter: blur(2px);
+  //     opacity: 0.7;
+  //     top: -22px;
+  //     transition: 0.3s;
+  //     transform: rotate(-20deg) translateX(-60px);
+  //   }
+  //   &:hover {
+  //     background: $hoverbuttonbg;
+  //     border: 4px solid #5e253c;
+  //     &::before{
+  //       transform: rotate(-20deg) translate(155px, 70px);
+  //     }
+  //   }
+  //   &:active {
+  //     background: #8c89b6;
+  //   }
+  //   .hero-btn-icon {
+  //     background: transparent;
+  //     color: $appleWhite;
+  //     font-size: 28px;
+  //     margin-right: 15px;
+  //     @media screen and (max-width: 900px) {
+  //       font-size: 20px;
+  //       margin-right: 10px;
+  //     }
+  //     @media screen and (max-width: 600px) {
+  //       font-size: 18px;
+  //       margin-right: 8px;
+  //     }
+  //   }
+  // }
 }

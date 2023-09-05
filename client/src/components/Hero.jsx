@@ -14,12 +14,14 @@ export default function Hero() {
       <div className={darkMode ? "hero-bg dark": "hero-bg"}>
         <div className="white-grid" />
       </div>
-      <a href="https://app.box.com/s/kjxbe409i76g3mi6v62feikjx4kxuu8p" target="blank">
-        <button className={darkMode ? 'hero-btn dark' : 'hero-btn'}>
-          <FontAwesomeIcon icon={faDownload} className="hero-btn-icon" />
-          Resume
-        </button>
-      </a>
+      <div className="button-container">
+        <a href="https://app.box.com/s/kjxbe409i76g3mi6v62feikjx4kxuu8p" target="blank">
+          <button className={darkMode ? 'hero-btn dark' : 'hero-btn'}>
+            <FontAwesomeIcon icon={faDownload} className="hero-btn-icon" />
+            Resume
+          </button>
+        </a>
+      </div>
     </section>
   )
 }
