@@ -35,7 +35,7 @@ export default function Contact() {
       <div className={darkMode ? 'contact-container dark' : 'contact-container'}>
         <div className="contact-column-left">
           <ContactForm submitForm={submitForm}/>
-        </div>
+        </div>3
         <div className={darkMode ? 'contact-column-right dark' : 'contact-column-right'}>
           <ContactTabs />
           <button form="contact-form" type="submit" className={darkMode ? 'contact-btn dark' : 'contact-btn'}><FontAwesomeIcon icon={faPaperPlane} className="send-icon"/>Send</button>

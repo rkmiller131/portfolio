@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTheme } from '../DarkThemeContext.jsx';
 import { Drawer, IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -15,6 +15,16 @@ export default function NavMobile() {
   const [toggleDrawer, setToggleDrawer] = useState(false);
   const darkMode = useTheme();
 
+  useEffect(() => {
+    function handler() {
+      setToggleDrawer(false);
+    }
+    document.addEventListener('mousedown', handler);
+
+    return () => document.removeEventListener('mousedown', handler);
+
+  })
+
   const styles = {
     menu: {
       fontFamily: 'Play',
@@ -24,7 +34,7 @@ export default function NavMobile() {
       fontFamily: 'Play',
       fontSize: '22px',
       padding: '10px',
-      borderBottom: '1px solid white'
+      borderBottom: darkMode ? '1px solid #FAFAFA' : '1px solid #5e253c'
     }
   }
 
@@ -56,7 +66,7 @@ export default function NavMobile() {
 
   return (
     <>
-      <IconButton sx={{position: 'fixed', right: '2%'}} aria-label='menu' className='menu' onClick={() => setToggleDrawer(true)}>
+      <IconButton sx={{position: 'absolute', right: '4%', top: '10%'}} aria-label='menu' className='menu' onClick={() => setToggleDrawer(true)}>
         <MenuIcon className={darkMode ? 'navburger dark' : 'navburger'} fontSize='large'/>
       </IconButton>
       <Drawer
@@ -64,8 +74,8 @@ export default function NavMobile() {
           elevation: 8,
           sx: {
             width: 240,
-            color: '#FAFAFA',
-            backgroundColor: '#9c7cac'
+            color: darkMode ? '#FAFAFA' : '#5e253c',
+            backgroundColor: darkMode ? '#202123' : '#FAFAFA'
           }
         }}
         anchor='right'
