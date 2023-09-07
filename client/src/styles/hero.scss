@@ -99,6 +99,7 @@ p {
       align-items: center;
       color: $appleWhite;
       font-family: 'Play', sans-serif;
+      // desktop responsiveness
       @media screen and (max-width: 1280px) {
         padding: 20% 5%;
       }
@@ -108,11 +109,28 @@ p {
       @media screen and (min-height: 1024px) and (max-height: 1070px) {
         padding: 25% 10% !important;
       }
-      @media screen and (max-width: 800px) {
+      @media screen and (max-width: 770px) {
         flex-direction: column-reverse;
       }
+      // ipads and tablets
+      // @media screen and (max-height: 1200px) {
+      //   flex-direction: column-reverse;
+      // }
+      // mobile responsiveness
+      @media screen and (max-width: 450px) {
+        padding: 35% 10%;
+      }
+      @media screen and (max-height: 450px) {
+        padding: 15% 5% 5% 5%;
+      }
+      @media screen and (max-height: 375px) {
+        flex-direction: row;
+        padding: 18% 5% 8% 5%;
+      }
+      @media screen and (max-height: 320px) {
+        padding: 22% 5% 8% 5%;
+      }
       .column {
-        border: 2px solid red;
         display: flex;
         flex: 1;
         margin: 1%;
@@ -124,6 +142,13 @@ p {
         @media screen and (max-width: 800px) {
           width: 75%;
         }
+        @media screen and (max-width: 450px) {
+          width: 100%;
+        }
+        // tablets and ipads
+        // @media screen and (max-height: 1200px) {
+        //   width: 85%;
+        // }
       }
       .hero-left {
         flex-direction: column;
@@ -152,6 +177,22 @@ p {
           @media screen and (max-width: 1100px) {
             text-align: center;
             font-size: 3.8rem;
+          }
+          // mobile responsiveness
+          @media screen and (max-width: 450px) {
+            font-size: 3rem;
+          }
+          @media screen and (max-height: 450px) {
+            font-size: 3.5rem;
+          }
+          @media screen and (max-width: 375px), (max-height: 375px) {
+            font-size: 2.7rem;
+          }
+          @media screen and (max-width: 320px) {
+            font-size: 2.4rem;
+          }
+          @media screen and (max-height: 320px) {
+            font-size: 1.9rem;
           }
         }
         .anim-typewriter {
@@ -196,6 +237,19 @@ p {
           @media screen and (max-width: 1300px) {
             font-size: 1.8rem;
           }
+          // mobile responsiveness
+          @media screen and (max-height: 450px) {
+            font-size: 1.6rem;
+          }
+          @media screen and (max-width: 375px), (max-height: 375px) {
+            font-size: 1.5rem;
+          }
+          @media screen and (max-width: 320px) {
+            font-size: 1.2rem;
+          }
+          @media screen and (max-height: 320px) {
+            font-size: 1rem;
+          }
         }
       }
       .hero-right {
@@ -208,6 +262,10 @@ p {
           width: 75%;
           background: $pink;
           border-radius: 1rem 1rem;
+          // mobile responsiveness
+          @media screen and (max-height: 450px) {
+            width: 65%;
+          }
         }
         &::after {
           content: url("https://res.cloudinary.com/dnr41r1lq/image/upload/v1691605496/300__1_mi9t2u.png");
@@ -219,6 +277,19 @@ p {
           }
           @media screen and (max-width: 1300px) {
             transform: scale(0.8);
+          }
+          // mobile responsiveness
+          @media screen and (max-width: 450px) {
+            transform: scale(0.7);
+          }
+          @media screen and (max-height: 450px) {
+            transform: scale(0.6);
+          }
+          @media screen and (max-height: 375px), (max-width: 375px) {
+            transform: scale(0.5);
+          }
+          @media screen and (max-width: 320px) {
+            transform: scale(0.4);
           }
         }
         &.dark {
@@ -244,6 +315,7 @@ p {
     background: $buttonbg;
     color: $appleWhite;
     font-size: 30px;
+    font-family: 'Jua', sans-serif;
     z-index: 10;
     overflow: hidden;
     // desktop responsiveness
@@ -258,9 +330,6 @@ p {
       font-size: 42px;
     }
     @media screen and (max-height: 770px) {
-      // height: 5rem;
-      // width: 13rem;
-      // font-size: 24px;
       height: 5.5rem;
       width: 16rem;
     }
@@ -287,6 +356,7 @@ p {
       width: 10rem;
       left: 10%;
       border-width: 3px;
+      font-size: 20px;
     }
     @media screen and (max-height: 375px) {
       height: 2.5rem;
