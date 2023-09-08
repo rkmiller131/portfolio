@@ -30,8 +30,8 @@ export default function TechStackItem({ section }) {
       imgList = ['node', 'express', 'mongo', 'postgres', 'mysql', 'spring'];
       break;
     case 'devTools':
-      techList = ['Jest', 'GitHub', 'Trello', 'Amazon AWS', 'CircleCI', 'Webpack'];
-      imgList = ['jest', 'github', 'trello', 'aws', 'circleci', 'webpack'];
+      techList = ['Jest', 'GitHub', 'Trello', 'AWS', 'Docker', 'Webpack'];
+      imgList = ['jest', 'github', 'trello', 'aws', 'docker', 'webpack'];
       break;
     default:
       return techList;
