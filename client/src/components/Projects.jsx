@@ -65,7 +65,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className={darkMode ? 'projects dark' : 'projects'}>
-      {/* <div className="white-grid project-grid" />
+      <div className="white-grid project-grid" />
 
       <div className="figure-container">
         <figure className="projects-title">
@@ -95,7 +95,7 @@ export default function Projects() {
             rightProjects.map((project, i) => <ProjectBubble project={project} className={'right-bubble'} key={i} />)
           }
         </article>
-      </div> */}
+      </div>
 
     </section>
   );
