@@ -14,7 +14,7 @@ export default function ProjectBubble({ project, className }) {
   });
 
   const direction = className === 'left-bubble' ? [1, 0] : [0, 1];
-  const transformer = className === 'left-bubble' ? [-45, 0] : [0, 45];
+  const transformer = className === 'left-bubble' ? [-100, 0] : [0, 100];
 
   return (
     <motion.div

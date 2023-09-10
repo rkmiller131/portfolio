@@ -33,7 +33,7 @@ export default function Projects() {
   const leftProjects = [
     {
       title: 'OldSkool CFVanguard',
-      description: 'Developed the backend for a legacy playstyle card searching app. Harvested specific card IDs with a script and utilized Mongock for an ETL process that object mapped relevant card information from an external API into a MongoDB.',
+      description: 'Developed the backend for a legacy playstyle card searching app. Harvested pertinent card IDs by extracting data from external API and utilized Mongock for an ETL process that object mapped relevant card information into a MongoDB. Employed scheduled annotation for front-end to fetch daily random cards at 9 a.m. PST while mastering Java, SpringMVC, Mongock, and Unirest within 3 weeks.',
       src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1692131215/cfVanguardDemo_pyu7nq.mp4',
       github: 'https://github.com/oldskool-vg/oldskoolbackend',
       id: 123
@@ -49,9 +49,10 @@ export default function Projects() {
   const rightProjects = [
     {
       title: 'Styl Forge',
-      description: 'Created the Ratings & Reviews widget for a full stack E-commerce app. Designed a fractional star rating system, review submission form, and product breakdown graphs with Flexbox. Optimized PostgreSQL queries to handle 1,000+ requests per second once depolyed on AWS EC2.',
+      description: 'Created the Ratings & Reviews widget for a full stack E-commerce app. Designed a fractional star rating system, review submission form, and product breakdown graphs with Flexbox. Loaded 2GB of csv data onto PostgreSQL. Optimized queries and load balanced to handle 1,000+ RPS at 70ms and 0.2% error rate once depolyed on AWS EC2.',
       src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1692139856/ShortenedFECDemo_vyagyn.mp4',
       github: 'https://github.com/CBC-Ecommerce/styl-forge',
+      link: 'http://54.176.80.166:3000/',
       id: 567
     },
     {
@@ -65,36 +66,34 @@ export default function Projects() {
 
   return (
     <section id="projects" className={darkMode ? 'projects dark' : 'projects'}>
-      <div className="white-grid project-grid" />
-
-      <div className="figure-container">
-        <figure className="projects-title">
-          {darkMode ?
-            <img className="title-image dark" src={require('../assets/dark/darkModeSlant.png')} alt="slanted figure" />
-            :
-            <img className="title-image" src={require('../assets/light/lightModeSlant.png')} alt="slanted figure" />
-          }
-        </figure>
-        <h2 className="projects-text">Projects</h2>
-      </div>
+      <div className="project-grid" />
+      <div className="slanted-figure-bg" />
+      {/* Thank you wonderful internet resource: https://css-tricks.com/cutting-inner-part-element-using-clip-path/ */}
+      <div className={darkMode ? "slanted-figure dark" : "slanted-figure"} />
 
       <div className="projects-container">
-
         <article className={darkMode ? 'project-column lefty dark' : 'project-column lefty'}>
-          {screenSize.width < 900 ?
-            leftProjects.map((project) => <div className="left-bubble" key={project.id}><MuiMediaCard project={project}/></div>)
-            :
-            leftProjects.map((project) => <ProjectBubble project={project} className={'left-bubble'} key={project.id} />)
+          {
+            screenSize.width < 900 ?
+              leftProjects.map((project) => <div className="left-bubble" key={project.id}><MuiMediaCard project={project}/></div>)
+              :
+              leftProjects.map((project) => <ProjectBubble project={project} className={'left-bubble'} key={project.id} />)
           }
         </article>
 
         <article className={darkMode ? 'project-column righty dark' : 'project-column righty'}>
-          {screenSize.width < 900 ?
-            rightProjects.map((project, i) => <div className="right-bubble" key={i}><MuiMediaCard project={project}/></div>)
-            :
-            rightProjects.map((project, i) => <ProjectBubble project={project} className={'right-bubble'} key={i} />)
+          {
+            screenSize.width < 900 ?
+              rightProjects.map((project, i) => <div className="right-bubble" key={i}><MuiMediaCard project={project}/></div>)
+              :
+              rightProjects.map((project, i) => <ProjectBubble project={project} className={'right-bubble'} key={i} />)
           }
         </article>
+      </div>
+
+      <div className="line-extension-container">
+        <div className={darkMode ? "line-extension dark" : "line-extension"} />
+        <div className="placeholder-col" />
       </div>
 
     </section>

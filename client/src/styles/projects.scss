@@ -1,157 +1,170 @@
 // light mode variables
 $purple-to-pink: linear-gradient(#9c7cac, #eda0c5);
 $appleWhite: #FAFAFA;
+$pink: #eda0c5;
+$red: #5e253c;
 $bubble: rgba(7, 0, 0, 0.25);
 
 // dark mode variables
 $purple-to-black: linear-gradient(#9c7cac, #202123);
 $purple: #9c7cac;
+$darkbg: #3E3744;
 $charcoal: #202123;
+$blue: #9b98ca;
 
 .projects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 150vh;
-  width: 100%;
   background: $purple-to-pink;
   color: $appleWhite;
+  display: flex;
+  flex-direction: column;
   position: relative;
+  // clip-path: polygon(55% 0, 66% 12%, 100% 12%, 100% 100%, 0 100%, 0 0);
   .project-grid {
-    min-height: 150vh;
-    @media screen and (max-width: 900px) {
-      min-height: 160vh;
-    }
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: 40px 40px;
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.25) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 1px, transparent 1px);
+      // clip-path: polygon(55% 0, 66% 12%, 100% 12%, 100% 100%, 0 100%, 0 0);
   }
-  .figure-container {
-    align-self: flex-end;
-    figure {
-      z-index: 50;
-      position: relative;
-      .title-image {
-        position: absolute;
-        height: 17vh;
-        right: 0;
-        top: -5px;
-        @media screen and (max-width: 900px) {
-          height: 15vh;
-        }
-        @media screen and (max-width: 600px) {
-          height: 14vh;
-          width: 75vw;
-        }
-        @media screen and (max-width: 450px) {
-          height: 12vh;
-          width: 60vw;
-        }
-      }
+  .slanted-figure-bg {
+    background-color: $bubble;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    // clip-path: polygon(56% 0, 66% 10%, 100% 10%, 100% 100%, 0 100%, 0 0);
+    clip-path: polygon(56% 0, 100% 0, 100% 10%, 66% 10%);
+    @media screen and (max-width: 1024px) {
+      clip-path: polygon(51% 0, 100% 0, 100% 8%, 62% 8%);
     }
-    .projects-text {
+    @media screen and (max-width: 900px) {
+      clip-path: polygon(51% 0, 100% 0, 100% 10%, 62% 10%);
+    }
+    @media screen and (max-width: 450px) {
+      clip-path: polygon(51% 0, 100% 0, 100% 6%, 62% 6%);
+    }
+    &::after {
+      content: "Projects";
+      color: $appleWhite;
       position: absolute;
-      z-index: 75;
       font-family: 'Play', sans-serif;
       font-size: 36px;
-      top: 3.5%;
-      right: 13%;
-      @media screen and (max-width: 900px) {
-        font-size: 32px;
-        top: 3%;
-        right: 20%;
+      right: 15%;
+      top: 65px;
+      z-index: 3;
+      @media screen and (max-width: 1024px) {
+        font-size: 34px;
+        top: 50px;
       }
-      @media screen and (max-width: 600px) {
-        font-size: 28px;
-        right: 25%;
+      @media screen and (max-width: 900px) {
+        top: 40px;
+        right: 13%;
       }
       @media screen and (max-width: 450px) {
+        top: 25px;
+        right: 10%;
         font-size: 24px;
-        top: 2.5%;
-        right: 16%;
+      }
+      @media screen and (max-width: 375px) {
+        top: 20px;
+        font-size: 22px;
       }
     }
-
+  }
+  .slanted-figure {
+    align-self: flex-end;
+    position: absolute;
+    background-color: $appleWhite;
+    clip-path: polygon(56% 0, 100% 0, 100% 10%, 65% 10%, 56% 0, 61% 2%, 66% 8%, 97% 8%, 97% 2%, 60% 2%);
+    // background: right/contain url("https://res.cloudinary.com/dnr41r1lq/image/upload/v1694272645/lightModeSlant_k783j0.png") no-repeat;
+    height: 100%;
+    width: 100%;
+    margin: -2px;
+    // z-index: 2;
+    // desktop responsiveness
+    @media screen and (max-width: 1280px) {
+      clip-path: polygon(51% 0, 100% 0, 100% 10%, 62% 10%, 51% 0, 58% 2%, 64% 8%, 97% 8%, 97% 2%, 58% 2%);
+    }
+    @media screen and (max-width: 1024px) {
+      clip-path: polygon(49% 0, 100% 0, 100% 8%, 62% 8%, 49% 0, 58% 2%, 64% 6%, 97% 6%, 97% 2%, 58% 2%);
+    }
+    @media screen and (max-width: 900px) {
+      clip-path: polygon(51% 0, 100% 0, 100% 12%, 62% 12%, 51% 0, 58% 2%, 64% 9%, 97% 9%, 97% 2%, 58% 2%);
+    }
+    // mobile responsiveness
+    @media screen and (max-width: 450px) {
+      clip-path: polygon(47% 0, 100% 0, 100% 8%, 62% 8%, 47% 0, 55% 1%, 64% 6%, 97% 6%, 97% 1%, 55% 1%);
+    }
+    @media screen and (max-width: 375px) {
+      clip-path: polygon(47% 0, 100% 0, 100% 6%, 62% 6%, 47% 0, 55% 1%, 64% 5%, 97% 5%, 97% 1%, 55% 1%);
+    }
+    &.dark {
+      background-color: $charcoal;
+    }
   }
   .projects-container {
-    height: 150vh;
-    width: 75%;
-    display: flex; // line up the columns in a row
-    @media screen and (max-width: 900px) {
-      flex-direction: column;
-      margin-top: 20%;
-    }
+    display: flex;
+    justify-content: center;
+    padding: 15% 5% 0 5%;
     .project-column {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      flex-basis: 50%;
-      @media screen and (max-width: 900px) {
-        justify-content: center;
-        align-items: center;
-        gap: 5%;
-      }
-      &.lefty {
-        border-right: 4px solid $appleWhite;
-        justify-content: flex-start;
-        &.dark {
-          border-right: 4px solid $charcoal;
-          @media screen and (max-width: 900px) {
-            justify-content: flex-end;
-            border: none;
-          }
-        }
-        @media screen and (max-width: 900px) {
-          justify-content: flex-end;
-          border: none;
-        }
-      }
-      &.righty {
-        border-left: 4px solid $appleWhite;
-        justify-content: flex-end;
-        &.dark {
-          border-left: 4px solid $charcoal;
-          @media screen and (max-width: 900px) {
-            justify-content: flex-start;
-            border: none;
-          }
-        }
-        @media screen and (max-width: 900px) {
-          justify-content: flex-start;
-          border: none;
-        }
-      }
-      .left-bubble, .right-bubble {
-        height: 35%;
-        width: 85%;
-        background: $bubble;
-        border-radius: 8%;
-        z-index: 50;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        @media screen and (max-width: 900px) {
-          height: 40%;
-          width: 100%;
-          overflow: hidden;
-        }
+      height: 100%;
+      width: 100%;
+    }
+    .lefty {
+      align-items: flex-end;
+      margin-top: -20%;
+      padding-top: 10%;
+      border-right: 8px solid $appleWhite;
+      &.dark {
+        border-right: 8px solid $charcoal;
       }
       .left-bubble {
-        margin-top: 15%;
-        // margin-right: 5%;
-        @media screen and (max-width: 900px) {
-          margin: 0;
-          margin-bottom: 10%;
-        }
+        display: flex;
+        justify-content: center;
+        padding: 5%;
+        margin-bottom: 50px;
+        width: 75%;
+        background: $bubble;
+        border-radius: 8%;
       }
+    }
+    .righty {
+      align-items: flex-start;
       .right-bubble {
-        margin-bottom: 15%;
-        // margin-left: 5%;
-        @media screen and (max-width: 900px) {
-          margin: 0;
-          margin-top: 10%;
-        }
+        display: flex;
+        justify-content: center;
+        padding: 5%;
+        margin-bottom: 50px;
+        width: 75%;
+        background: $bubble;
+        border-radius: 8%;
       }
+    }
+  }
+  .line-extension-container {
+    // border: 2px solid red;
+    width: 100%;
+    height: 25px;
+    display: flex;
+    .line-extension {
+      border-right: 8px solid $appleWhite;
+      margin-top: -10%;
+      width: 100%;
+      &.dark {
+        border-right: 8px solid $charcoal;
+      }
+    }
+    .placeholder-col {
+      width: 100%;
+      height: 100%;
     }
   }
   &.dark {
     background: $purple-to-black;
+    color: $charcoal;
   }
 }

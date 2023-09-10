@@ -6,8 +6,10 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { useTheme } from '../DarkThemeContext.jsx';
 
 export default function MuiMediaCard({ project }) {
+  const darkMode = useTheme();
   return (
     <Card sx={{
       maxWidth: 375,
@@ -38,6 +40,7 @@ export default function MuiMediaCard({ project }) {
       </CardActionArea>
       <CardContent
         sx={{
+          background: darkMode ? '#3E3744' : '#FAFAFA',
           "@media (max-width: 900px)": {
             padding: "10px"
           },
@@ -50,8 +53,8 @@ export default function MuiMediaCard({ project }) {
           gutterBottom variant="h5"
           component="div"
           sx={{
-            color: '#FAFAFA',
-            fontFamily: 'Play, sans-serif',
+            color: darkMode ? '#9b98ca' : '#5e253c',
+            fontFamily: 'Jua, sans-serif',
             "@media (max-width: 900px)": {
               fontSize: "1rem"
             },
@@ -66,8 +69,8 @@ export default function MuiMediaCard({ project }) {
           variant="body2"
           color="text.secondary"
           sx={{
-            color: '#FAFAFA',
-            fontFamily: 'JUA, sans-serif',
+            color: darkMode ? '#9b98ca' : '#5e253c',
+            fontFamily: 'Play, sans-serif',
             "@media (max-width: 900px)": {
               fontSize: "0.65rem"
             },
@@ -78,8 +81,13 @@ export default function MuiMediaCard({ project }) {
       </CardContent>
       <CardActions>
         <a href={project.github} target="blank">
-          <Button size="small" sx={{ color: "#eda0c5", textDecoration: "underline" }}>Github</Button>
+          <Button size="small" sx={{ color: darkMode ? "#9c7cac" : "#eda0c5", textDecoration: "underline" }}>Github</Button>
         </a>
+        {project.link &&
+          <a href={project.link} target="blank">
+            <Button size="small" sx={{ color: darkMode ? "#9c7cac" : "#eda0c5", textDecoration: "underline" }}>Live Demo</Button>
+          </a>
+        }
       </CardActions>
     </Card>
   )

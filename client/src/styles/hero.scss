@@ -159,6 +159,9 @@ p {
           overflow: hidden;
           border-right: 4px solid $red;
           // desktop responsiveness
+          @media screen and (max-width: 1800px) {
+            font-size: 6.3rem;
+          }
           @media screen and (max-width: 1600px) {
             font-size: 5.3rem;
           }
@@ -173,6 +176,9 @@ p {
           }
           @media screen and (max-width: 1300px) {
             font-size: 4.7rem;
+          }
+          @media screen and (max-width: 1200px) {
+            font-size: 4.4rem;
           }
           @media screen and (max-width: 1100px) {
             text-align: center;
@@ -272,6 +278,9 @@ p {
           position: absolute;
           transform: scale(1.2);
           // desktop responsiveness
+          @media screen and (max-width: 1920px) and (max-height: 900px) {
+            transform: scale(0.9);
+          }
           @media screen and (max-width: 1600px) {
             transform: scale(1);
           }
