@@ -52,6 +52,7 @@ export default function Projects() {
       description: 'Created the Ratings & Reviews widget for a full stack E-commerce app. Designed a fractional star rating system, review submission form, and product breakdown graphs with Flexbox. Loaded 2GB of csv data onto PostgreSQL. Optimized queries and load balanced to handle 1,000+ RPS at 70ms and 0.2% error rate once depolyed on AWS EC2.',
       src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1692139856/ShortenedFECDemo_vyagyn.mp4',
       github: 'https://github.com/CBC-Ecommerce/styl-forge',
+      link: 'http://54.176.80.166:3000/',
       id: 567
     },
     {
@@ -88,6 +89,11 @@ export default function Projects() {
               rightProjects.map((project, i) => <ProjectBubble project={project} className={'right-bubble'} key={i} />)
           }
         </article>
+      </div>
+
+      <div className="line-extension-container">
+        <div className={darkMode ? "line-extension dark" : "line-extension"} />
+        <div className="placeholder-col" />
       </div>
 
     </section>
