@@ -15,7 +15,7 @@ export default function ContactTabs() {
       <div className={darkMode ? 'link-tab dark' : 'link-tab'}>
         {'>'}
         <a href="https://github.com/rkmiller131" target="blank">
-          Github
+          GitHub
         </a>
       </div>
     </div>
