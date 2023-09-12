@@ -55,8 +55,23 @@ $blue: #9b98ca;
         flex-direction: column;
         height: 100vh;
       }
-      @media screen and (max-height: 360px) {
-        height: 200vh;
+      @media screen and (max-width: 500px) {
+        height: 125vh;
+      }
+      @media screen and (max-height: 375px) {
+        height: 250vh;
+      }
+      @media only screen and (max-height: 360px) and (width: 780px), (max-height: 360px) and (width: 760px), (max-width: 360px) and (height: 480px) {
+        height: 175vh;
+      }
+      @media only screen and (max-width: 480px) and (height: 320px) {
+        height: 300vh;
+      }
+      @media only screen and (max-width: 450px) and (height: 896px), (max-width: 360px) and (height: 780px), (max-width: 360px) and (height: 760px), (max-width: 375px) and (height: 812px), (max-width: 400px) and (height: 844px) {
+        height: 100vh;
+      }
+      @media only screen and (max-width: 350px) and (height: 568px) {
+        height: 140vh;
       }
       &.dark {
         background: $cardCharcoal;
@@ -65,6 +80,10 @@ $blue: #9b98ca;
       .contact-column-left {
         flex-basis: 60%;
         padding: 5%;
+        @media screen and (max-width: 700px) {
+          display: flex;
+          justify-content: center;
+        }
       }
       .contact-column-right {
         flex-basis: 40%;
