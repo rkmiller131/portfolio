@@ -61,17 +61,17 @@ export default function ContactForm({ submitForm }) {
 
   return (
     <form id="contact-form" onSubmit={handleSubmit}>
-      <label className={darkMode ? 'dark' : ''}>Hello there, my name is</label>
-      <input className={darkMode ? 'dark' : ''} type="text" name="user_name" onChange={handleChange} />
+      <label className={darkMode ? 'left-align dark' : 'left-align'}>Hello there, my name is</label>
+      <input className={darkMode ? 'left-align dark' : 'left-align'} type="text" name="user_name" onChange={handleChange} />
 
       <label className={darkMode ? 'indent dark' : 'indent'}>I'm reaching out because</label>
-      <textarea className={darkMode ? 'indent dark' : 'indent'} name="input1" onChange={handleChange} />
+      <input className={darkMode ? 'indent dark' : 'indent'} type="text" name="input1" onChange={handleChange} />
 
       <label className={darkMode ? 'indent dark' : 'indent'}>If I were a bug<FontAwesomeIcon icon={faBug}/>, I would be</label>
-      <textarea className={darkMode ? 'indent dark' : 'indent'} type="text" name="input2" onChange={handleChange} />
+      <input className={darkMode ? 'indent dark' : 'indent'} type="text" name="input2" onChange={handleChange} />
 
-      <label className={darkMode ? 'dark' : ''}>Anyways, you can reach me at:</label>
-      <input className={darkMode ? 'dark' : ''} type="email" placeholder='yourEmail@email.com' name="user_email" onChange={handleChange} />
+      <label className={darkMode ? 'left-align dark' : 'left-align'}>Anyways, you can reach me at:</label>
+      <input className={darkMode ? 'left-align dark' : 'left-align'} type="email" placeholder='yourEmail@email.com' name="user_email" onChange={handleChange} />
     </form>
   )
 }

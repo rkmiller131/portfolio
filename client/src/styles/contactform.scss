@@ -7,115 +7,215 @@ $softerWhite: #f6f1f4;
 #contact-form {
   display: flex;
   flex-direction: column;
-  margin: 10% 7%;
-  width:100%;
-  @media screen and (max-width: 900px) {
-    display: block;
-  }
-  @media screen and (max-width: 800px) {
-    margin: 10px 0;
-  }
-  @media screen and (max-width: 600px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+  justify-content: space-between;
+  gap: 1.5rem;
   .indent {
     align-self: flex-end;
-    margin-right: 12px;
-    @media screen and (max-width: 1300px) {
-      margin-right: 15px;
-    }
-    @media screen and (max-width: 600px) {
-      margin: 8px 0 0 0;
-      align-self: center;
+    margin-right: 5%;
+    @media screen and (max-width: 1000px) {
+      align-self: flex-start;
     }
   }
   label {
     font-size: 36px;
+    width: 75%;
     color: $red;
-    margin: 8px 0;
+    @media screen and (max-width: 1400px) {
+      font-size: 30px;
+    }
+    @media screen and (max-width: 1000px) {
+      width: 95%;
+    }
+    @media screen and (max-width: 800px) {
+      font-size: 28px;
+      text-align: center;
+    }
+    @media screen and (max-width: 700px) {
+      font-size: 36px;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 32px;
+    }
+    @media screen and (max-width: 450px) {
+      font-size: 22px;
+    }
+    &.indent {
+      text-align: center;
+      @media screen and (max-width: 1000px) {
+        text-align: left;
+      }
+      @media screen and (max-width: 800px) {
+        text-align: center;
+        font-size: 28px;
+      }
+      @media screen and (max-width: 700px) {
+        font-size: 36px;
+      }
+      @media screen and (max-width: 600px) {
+        font-size: 32px;
+      }
+      @media screen and (max-width: 450px) {
+        font-size: 22px;
+      }
+    }
     &.dark {
       color: $blue;
     }
-    @media screen and (max-width: 1400px) {
-      margin: 0;
-    }
-    @media screen and (max-width: 1300px) {
-      font-size: 26px;
-      margin: 15px 0;
-    }
-    @media screen and (max-width: 900px) {
-      font-size: 22px;
-      margin: 0;
-    }
-    @media screen and (max-width: 600px) {
-      margin: 8px 0 0 0;
-      font-size: 18px;
-    }
-    @media screen and (max-width: 450px) {
-      margin: 10px 0 0 0;
-      font-size: 16px;
-    }
   }
   input {
-    margin: 8px 0;
+    width: 50%;
     height: 40px;
-    width: 250px;
-    background: none;
-    border: none;
-    font-size: 22px;
+    font-size: 24px;
+    font-family: 'Jua', sans-serif;
     color: $pink;
-    border-bottom: 4px dashed $red;
-    &.dark {
-      color: $purple;
-      border-bottom: 4px dashed $blue;
-    }
-    @media screen and (max-width: 1300px) {
-      width: 250px;
-      margin: 10px 0;
-    }
-    @media screen and (max-width: 900px) {
-      width: 225px;
-    }
-    @media screen and (max-width: 800px) {
-      width: 200px;
-    }
-    @media screen and (max-width: 600px) {
-      height: 30px;
-    }
-    @media screen and (max-width: 450px) {
-      font-size: 16px;
-      width: 170px;
-    }
-  }
-  textarea {
-    font-size: 22px;
-    color: $pink;
-    margin: 8px 0;
-    height: 40px;
-    width: 350px;
     background: none;
     border: none;
     border-bottom: 4px dashed $red;
+    @media screen and (max-width: 1000px) {
+      width: 70%;
+    }
+    @media screen and (max-width: 800px) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: 700px) {
+      font-size: 24px;
+      align-self: center;
+    }
+    @media screen and (max-width: 450px) {
+      font-size: 16px;
+    }
+    &.indent {
+      width: 70%;
+      @media screen and (max-width: 800px) {
+        font-size: 20px;
+        align-self: center;
+      }
+      @media screen and (max-width: 700px) {
+        font-size: 24px;
+      }
+      @media screen and (max-width: 450px) {
+        font-size: 16px;
+      }
+    }
     &.dark {
       color: $purple;
       border-bottom: 4px dashed $blue;
-    }
-    @media screen and (max-width: 1300px) {
-      width: 250px;
-    }
-    @media screen and (max-width: 800px) {
-      width: 225px;
-    }
-    @media screen and (max-width: 600px) {
-      width: 200px;
-      height: 30px;
-    }
-    @media screen and (max-width: 450px) {
-      width: 170px;
-      font-size: 16px;
     }
   }
 }
+
+// #contact-form {
+//   display: flex;
+//   flex-direction: column;
+//   // margin: 10% 7%;
+//   width:100%;
+//   @media screen and (max-width: 900px) {
+//     display: block;
+//   }
+//   @media screen and (max-width: 800px) {
+//     margin: 10px 0;
+//   }
+//   @media screen and (max-width: 600px) {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//   }
+//   .indent {
+//     align-self: flex-end;
+//     margin-right: 12px;
+//     @media screen and (max-width: 1300px) {
+//       margin-right: 15px;
+//     }
+//     @media screen and (max-width: 600px) {
+//       margin: 8px 0 0 0;
+//       align-self: center;
+//     }
+//   }
+//   label {
+//     font-size: 36px;
+//     color: $red;
+//     margin: 8px 0;
+//     &.dark {
+//       color: $blue;
+//     }
+//     @media screen and (max-width: 1400px) {
+//       margin: 0;
+//     }
+//     @media screen and (max-width: 1300px) {
+//       font-size: 26px;
+//       margin: 15px 0;
+//     }
+//     @media screen and (max-width: 900px) {
+//       font-size: 22px;
+//       margin: 0;
+//     }
+//     @media screen and (max-width: 600px) {
+//       margin: 8px 0 0 0;
+//       font-size: 18px;
+//     }
+//     @media screen and (max-width: 450px) {
+//       margin: 10px 0 0 0;
+//       font-size: 16px;
+//     }
+//   }
+//   input {
+//     margin: 8px 0;
+//     height: 40px;
+//     width: 250px;
+//     background: none;
+//     border: none;
+//     font-size: 22px;
+//     color: $pink;
+//     border-bottom: 4px dashed $red;
+//     &.dark {
+//       color: $purple;
+//       border-bottom: 4px dashed $blue;
+//     }
+//     @media screen and (max-width: 1300px) {
+//       width: 250px;
+//       margin: 10px 0;
+//     }
+//     @media screen and (max-width: 900px) {
+//       width: 225px;
+//     }
+//     @media screen and (max-width: 800px) {
+//       width: 200px;
+//     }
+//     @media screen and (max-width: 600px) {
+//       height: 30px;
+//     }
+//     @media screen and (max-width: 450px) {
+//       font-size: 16px;
+//       width: 170px;
+//     }
+//   }
+//   textarea {
+//     font-size: 22px;
+//     color: $pink;
+//     margin: 8px 0;
+//     height: 40px;
+//     width: 350px;
+//     background: none;
+//     border: none;
+//     border-bottom: 4px dashed $red;
+//     &.dark {
+//       color: $purple;
+//       border-bottom: 4px dashed $blue;
+//     }
+//     @media screen and (max-width: 1300px) {
+//       width: 250px;
+//     }
+//     @media screen and (max-width: 800px) {
+//       width: 225px;
+//     }
+//     @media screen and (max-width: 600px) {
+//       width: 200px;
+//       height: 30px;
+//     }
+//     @media screen and (max-width: 450px) {
+//       width: 170px;
+//       font-size: 16px;
+//     }
+//   }
+// }
