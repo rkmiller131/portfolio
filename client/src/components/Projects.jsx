@@ -33,14 +33,14 @@ export default function Projects() {
   const leftProjects = [
     {
       title: 'OldSkool CFVanguard',
-      description: 'Developed the backend for a legacy playstyle card searching app. Harvested pertinent card IDs by extracting data from external API and utilized Mongock for an ETL process that object mapped relevant card information into a MongoDB. Employed scheduled annotation for front-end to fetch daily random cards at 9 a.m. PST while mastering Java, SpringMVC, Mongock, and Unirest within 3 weeks.',
+      description: 'Developed the backend for a legacy playstyle card searching app. Harvested pertinent card IDs by extracting data from external API and utilized Mongock for an ETL process that object mapped relevant card information into a MongoDB. Employed scheduled annotation for front-end to fetch daily random cards at 9 a.m. PST while learning Java, SpringMVC, Mongock, and Unirest within 3 weeks.',
       src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1692131215/cfVanguardDemo_pyu7nq.mp4',
       github: 'https://github.com/oldskool-vg/oldskoolbackend',
       id: 123
     },
     {
       title: 'Village Sports',
-      description: 'A sports league meetup mobile app with React Native. Developed a Home Page carousel, weekly announcement feed, and Wishlist feature, integrating Firebase authentication and Firestore database.',
+      description: 'A sports league meetup mobile app with React Native. Developed a Home Page carousel, weekly announcement feed and Wishlist feature, integrating Firebase authentication and Firestore database.',
       src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1692151765/Untitled_video_ohhxpp.mp4',
       github: 'https://github.com/Blue-Ocean-Naruto/Village-Sports',
       id: 345

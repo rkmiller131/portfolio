@@ -113,9 +113,10 @@ p {
         flex-direction: column-reverse;
       }
       // ipads and tablets
-      // @media screen and (max-height: 1200px) {
-      //   flex-direction: column-reverse;
-      // }
+      @media screen and (width: 820px) and (height: 1180px), (width: 912px) and (height: 1368px) {
+        flex-direction: column-reverse;
+        padding: 25% 10%;
+      }
       // mobile responsiveness
       @media screen and (max-width: 450px) {
         padding: 35% 10%;
@@ -145,10 +146,10 @@ p {
         @media screen and (max-width: 450px) {
           width: 100%;
         }
-        // tablets and ipads
-        // @media screen and (max-height: 1200px) {
-        //   width: 85%;
-        // }
+        // ipads and tablets
+        @media screen and (width: 820px) and (height: 1180px), (width: 912px) and (height: 1368px) {
+          width: 85%;
+        }
       }
       .hero-left {
         flex-direction: column;
@@ -199,6 +200,9 @@ p {
           }
           @media screen and (max-height: 320px) {
             font-size: 1.9rem;
+          }
+          @media screen and (max-width: 300px) {
+            font-size: 2rem;
           }
         }
         .anim-typewriter {
