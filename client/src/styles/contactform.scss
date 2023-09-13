@@ -16,6 +16,9 @@ $softerWhite: #f6f1f4;
       align-self: flex-start;
     }
   }
+  @media screen and (max-width: 500px) {
+    gap: 0;
+  }
   label {
     font-size: 36px;
     width: 75%;
