@@ -12,20 +12,13 @@ export default function MuiMediaCard({ project }) {
   const darkMode = useTheme();
   return (
     <Card sx={{
-      maxWidth: 375,
       background: 'transparent',
-      "@media (max-width: 900px)": {
-        height: "fit-content"
-      },
-      "@media (max-width: 450px)": {
-        maxWidth: 290
-      },
      }}>
       <CardActionArea>
         <CardMedia
           component="video"
           alt="project prieview video"
-          height="200"
+          // height="200"
           src={project.src}
           controls
           sx={{
