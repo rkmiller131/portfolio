@@ -39,6 +39,13 @@ export default function Projects() {
       id: 123
     },
     {
+      title: 'WhimsiWorld',
+      description: 'Pioneered the inception of a collaborative, turn-based creative writing platform for storytelling with friends using multimedia assets, community engagement, and competition. Took ownership of creating and providing visual assets and multimedia elements using Photoshop and Midjourney, ensuring a cohesive and engaging user experience. Demonstrated proficiency in front-end development by styling the storyboard homepage with Tailwind CSS.',
+      src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1695477373/WhimsiWorldDemo_mvdoxy.mp4',
+      github: 'https://github.com/WhimsWorld/BlueOcean/graphs/contributors',
+      id: 222
+    },
+    {
       title: 'Village Sports',
       description: 'A sports league meetup mobile app with React Native. Developed a Home Page carousel, weekly announcement feed and Wishlist feature, integrating Firebase authentication and Firestore database.',
       src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1692151765/Untitled_video_ohhxpp.mp4',

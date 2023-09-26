@@ -74,6 +74,9 @@ $softerWhite: #f6f1f4;
     background: none;
     border: none;
     border-bottom: 4px dashed $red;
+    &:hover {
+      cursor: text;
+    }
     @media screen and (max-width: 1000px) {
       width: 70%;
     }
