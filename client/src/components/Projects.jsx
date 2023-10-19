@@ -32,18 +32,19 @@ export default function Projects() {
 
   const leftProjects = [
     {
-      title: 'OldSkool CFVanguard',
-      description: 'Developed the backend for a legacy playstyle card searching app. Harvested pertinent card IDs by extracting data from external API and utilized Mongock for an ETL process that object mapped relevant card information into a MongoDB. Employed scheduled annotation for front-end to fetch daily random cards at 9 a.m. PST while learning Java, SpringMVC, Mongock, and Unirest within 3 weeks.',
-      src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1692131215/cfVanguardDemo_pyu7nq.mp4',
-      github: 'https://github.com/oldskool-vg/oldskoolbackend',
-      id: 123
+      title: 'Paper Cat Games',
+      description: `Conducted in-depth research on the client's brand, voice, and misssion in order to build a Figma wireframe and project proposal. Skillfully managed the project's transition from Node.js to Next.js with React Bricks CMS integration, achieving the stretch goal of enabling the client to independently add and manage website content. Crafted a unique Navbar and Home Page layouts with CSS modules for a tailored user experience.`,
+      src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1697746635/PaperCat_hzn0zh.mp4',
+      github: 'https://github.com/Paper-Studios/cms-papercat',
+      id: 198
     },
     {
-      title: 'WhimsiWorld',
-      description: 'Pioneered the inception of a collaborative, turn-based creative writing platform for storytelling with friends using multimedia assets, community engagement, and competition. Took ownership of creating and providing visual assets and multimedia elements using Photoshop and Midjourney, ensuring a cohesive and engaging user experience. Demonstrated proficiency in front-end development by styling the storyboard homepage with Tailwind CSS.',
-      src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1695477373/WhimsiWorldDemo_mvdoxy.mp4',
-      github: 'https://github.com/WhimsWorld/BlueOcean/graphs/contributors',
-      id: 222
+      title: 'Styl Forge',
+      description: 'Created the Ratings & Reviews widget for a full stack E-commerce app. Designed a fractional star rating system, review submission form, and product breakdown graphs with Flexbox. Loaded 2GB of csv data onto PostgreSQL. Optimized queries and load balanced to handle 1,000+ RPS at 70ms and 0.2% error rate once depolyed on AWS EC2.',
+      src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1692139856/ShortenedFECDemo_vyagyn.mp4',
+      github: 'https://github.com/CBC-Ecommerce/styl-forge',
+      link: 'http://54.176.80.166:3000/',
+      id: 567
     },
     {
       title: 'Village Sports',
@@ -55,12 +56,18 @@ export default function Projects() {
   ];
   const rightProjects = [
     {
-      title: 'Styl Forge',
-      description: 'Created the Ratings & Reviews widget for a full stack E-commerce app. Designed a fractional star rating system, review submission form, and product breakdown graphs with Flexbox. Loaded 2GB of csv data onto PostgreSQL. Optimized queries and load balanced to handle 1,000+ RPS at 70ms and 0.2% error rate once depolyed on AWS EC2.',
-      src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1692139856/ShortenedFECDemo_vyagyn.mp4',
-      github: 'https://github.com/CBC-Ecommerce/styl-forge',
-      link: 'http://54.176.80.166:3000/',
-      id: 567
+      title: 'WhimsiWorld',
+      description: 'Pioneered the inception of a collaborative, turn-based creative writing platform for storytelling with friends using multimedia assets, community engagement, and competition. Took ownership of creating and providing visual assets and multimedia elements using Photoshop and Midjourney, ensuring a cohesive and engaging user experience. Demonstrated proficiency in front-end development by styling the storyboard homepage with Tailwind CSS.',
+      src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1695477373/WhimsiWorldDemo_mvdoxy.mp4',
+      github: 'https://github.com/WhimsWorld/BlueOcean/graphs/contributors',
+      id: 222
+    },
+    {
+      title: 'OldSkool CFVanguard',
+      description: 'Developed the backend for a legacy playstyle card searching app. Harvested pertinent card IDs by extracting data from external API and utilized Mongock for an ETL process that object mapped relevant card information into a MongoDB. Employed scheduled annotation for front-end to fetch daily random cards at 9 a.m. PST while learning Java, SpringMVC, Mongock, and Unirest within 3 weeks.',
+      src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1692131215/cfVanguardDemo_pyu7nq.mp4',
+      github: 'https://github.com/oldskool-vg/oldskoolbackend',
+      id: 123
     },
     {
       title: 'LifeTrack Labs',

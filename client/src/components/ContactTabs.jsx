@@ -5,19 +5,18 @@ export default function ContactTabs() {
   const darkMode = useTheme();
   return (
     <div className="contact-tabs">
-      <div className={darkMode ? 'link-tab dark' : 'link-tab'}>
-      {'>'}
       <a href="https://www.linkedin.com/in/rachel-miller-mlr/" target="blank">
-        LinkedIn
+        <div className={darkMode ? 'link-tab dark' : 'link-tab'}>
+          {'>'}
+          <span>LinkedIn</span>
+        </div>
       </a>
-      </div>
-
-      <div className={darkMode ? 'link-tab dark' : 'link-tab'}>
-        {'>'}
-        <a href="https://github.com/rkmiller131" target="blank">
-          GitHub
-        </a>
-      </div>
+      <a href="https://github.com/rkmiller131" target="blank">
+        <div className={darkMode ? 'link-tab dark' : 'link-tab'}>
+          {'>'}
+          <span>GitHub</span>
+        </div>
+      </a>
     </div>
   )
 }
