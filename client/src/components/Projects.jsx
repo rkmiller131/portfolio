@@ -40,7 +40,7 @@ export default function Projects() {
     },
     {
       title: 'Styl Forge',
-      description: 'Created the Ratings & Reviews widget for a full stack E-commerce app. Designed a fractional star rating system, review submission form, and product breakdown graphs with Flexbox. Loaded 2GB of csv data onto PostgreSQL. Optimized queries and load balanced to handle 1,000+ RPS at 70ms and 0.2% error rate once depolyed on AWS EC2.',
+      description: 'Translated UI wireframe design into a SPA, creating an innovative fractional 5-star rating system and product breakdown charts with vanilla CSS. Employed industry standard testing libraries such as Jest and RTL, achieving 80% code coverage for unit tests. Loaded 2GB of csv data onto PostgreSQL. Optimized queries and load balanced to handle 1,000+ RPS at 70ms and 0.2% error rate once depolyed on AWS EC2.',
       src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1692139856/ShortenedFECDemo_vyagyn.mp4',
       github: 'https://github.com/CBC-Ecommerce/styl-forge',
       link: 'http://54.176.80.166:3000/',
@@ -57,9 +57,9 @@ export default function Projects() {
   const rightProjects = [
     {
       title: 'WhimsiWorld',
-      description: 'Pioneered the inception of a collaborative, turn-based creative writing platform for storytelling with friends using multimedia assets, community engagement, and competition. Took ownership of creating and providing visual assets and multimedia elements using Photoshop and Midjourney, ensuring a cohesive and engaging user experience. Demonstrated proficiency in front-end development by styling the storyboard homepage with Tailwind CSS.',
+      description: 'Pioneered the inception of a collaborative, turn-based creative writing platform for storytelling with friends using multimedia assets, community engagement, and competition. Created over 100 visual assets and story packs using Photoshop, Figma, and Midjourney AI and styled the storyboard home page with React and Tailwind CSS to ensure a cohesive and engaging user experience.',
       src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1695477373/WhimsiWorldDemo_mvdoxy.mp4',
-      github: 'https://github.com/WhimsWorld/BlueOcean/graphs/contributors',
+      github: 'https://github.com/WhimsWorld/BlueOcean',
       id: 222
     },
     {
