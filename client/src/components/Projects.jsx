@@ -56,7 +56,7 @@ export default function Projects() {
     // }
     {
       title: 'Dog Age Calculator',
-      description: `A fun app for converting a dog's age into the human equivalent using two different formulas (it's a little more than just times 7). Created over a holiday weekend using an accessible, mobile-first approach.`,
+      description: `A fun app for converting a dog's age into the human equivalent using two different formulas (it's a little more than just the age times 7). Created over a holiday weekend using an accessible, mobile-first approach.`,
       src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1703956908/dogAgeDemo_vughie.mp4',
       github: 'https://github.com/rkmiller131/dog-age-calculator',
       link: 'https://calculatedogage.netlify.app/',

@@ -25,7 +25,6 @@ export default function MuiMediaCard({ project }) {
       <CardContent
         sx={{
           background: darkMode ? '#3E3744' : '#FAFAFA',
-          zIndex: 1,
           "@media (max-width: 900px)": {
             padding: "10px"
           },
