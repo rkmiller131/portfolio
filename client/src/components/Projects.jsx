@@ -33,14 +33,14 @@ export default function Projects() {
   const leftProjects = [
     {
       title: 'Paper Cat Games',
-      description: `Conducted in-depth research on the client's brand, voice, and misssion in order to build a Figma wireframe and project proposal. Skillfully managed the project's transition from Node.js to Next.js with React Bricks CMS integration, achieving the stretch goal of enabling the client to independently add and manage website content. Crafted a unique Navbar and Home Page layouts with CSS modules for a tailored user experience.`,
-      src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1697746635/PaperCat_hzn0zh.mp4',
+      description: `Conducted in-depth research on the client's brand, voice, and misssion in order to build a Figma wireframe and project proposal. Skillfully managed the project's transition from Node.js to Next.js with React Bricks CMS integration, achieving the stretch goal of enabling the client to independently add and manage website content. Crafted unique layouts with CSS modules for a tailored user experience.`,
+      src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1702160880/PapercatAdminDemo_zaar0r.mp4',
       github: 'https://github.com/Paper-Studios/cms-papercat',
       id: 198
     },
     {
       title: 'Styl Forge',
-      description: 'Translated UI wireframe design into a SPA, creating an innovative fractional 5-star rating system and product breakdown charts with vanilla CSS. Employed industry standard testing libraries such as Jest and RTL, achieving 80% code coverage for unit tests. Loaded 2GB of csv data onto PostgreSQL. Optimized queries and load balanced to handle 1,000+ RPS at 70ms and 0.2% error rate once depolyed on AWS EC2.',
+      description: 'Translated UI wireframe design into a SPA, creating an innovative fractional 5-star rating system and product breakdown charts with vanilla CSS. Employed industry standard testing libraries such as Jest and RTL, achieving 80% code coverage for unit tests. Enabled photo uploads in URL format via externally hosted base64 data to address backend compatibility issues.',
       src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1692139856/ShortenedFECDemo_vyagyn.mp4',
       github: 'https://github.com/CBC-Ecommerce/styl-forge',
       link: 'http://54.176.80.166:3000/',
