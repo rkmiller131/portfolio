@@ -18,22 +18,14 @@ export default function MuiMediaCard({ project }) {
         <CardMedia
           component="video"
           alt="project prieview video"
-          // height="200"
           src={project.src}
           controls
-          sx={{
-            "@media (max-width: 900px)": {
-              height: "120px"
-            },
-            "@media (max-width: 450px)": {
-              height: "100px"
-            }
-          }}
         />
       </CardActionArea>
       <CardContent
         sx={{
           background: darkMode ? '#3E3744' : '#FAFAFA',
+          zIndex: 1,
           "@media (max-width: 900px)": {
             padding: "10px"
           },
@@ -49,7 +41,7 @@ export default function MuiMediaCard({ project }) {
             color: darkMode ? '#9b98ca' : '#5e253c',
             fontFamily: 'Jua, sans-serif',
             "@media (max-width: 900px)": {
-              fontSize: "1rem"
+              fontSize: "1rem",
             },
             "@media (max-width: 450px)": {
               fontSize: "1rem"
