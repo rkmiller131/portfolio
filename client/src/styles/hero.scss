@@ -99,7 +99,18 @@ p {
       color: $appleWhite;
       font-family: 'Play', sans-serif;
       gap: 2.5rem;
-      @media screen and (max-width: 1100px) {
+      // special case for tablets
+      @media screen and (width: 768px) and (height: 1024px) {
+        flex-direction: column-reverse;
+      }
+      @media screen and (width: 820px) and (height: 1180px) {
+        flex-direction: column-reverse;
+      }
+      @media screen and (width: 1024px) and (height: 1366px) {
+        flex-direction: column-reverse;
+      }
+      // mobile responsivenes
+      @media screen and (max-width: 600px) {
         flex-direction: column-reverse;
         gap: 1rem;
       }
@@ -115,7 +126,10 @@ p {
           border-radius: 2rem 2rem;
           padding: 4rem 8rem;
           @media screen and (max-width: 1100px) {
-            padding: 2rem;
+            padding: 2rem 4rem;
+          }
+          @media screen and (max-width: 300px) {
+            padding: 1rem 2rem;
           }
         }
         .hero-title {
@@ -132,6 +146,25 @@ p {
           }
           @media screen and (max-width: 1100px) {
             font-size: 4rem;
+          }
+          @media screen and (max-width: 900px) {
+            font-size: 3rem;
+          }
+          @media screen and (max-width: 700px) {
+            font-size: 2.75rem;
+          }
+          @media screen and (max-width: 300px) {
+            font-size: 2.25rem;
+          }
+          // special case for tablets
+          @media screen and (width: 768px) and (height: 1024px) {
+            font-size: 6rem;
+          }
+          @media screen and (width: 820px) and (height: 1180px) {
+            font-size: 6rem;
+          }
+          @media screen and (width: 1024px) and (height: 1366px) {
+            font-size: 6rem;
           }
         }
         .anim-typewriter {
@@ -175,6 +208,22 @@ p {
           @media screen and (max-width: 1100px) {
             font-size: 1.5rem;
           }
+          @media screen and (max-width: 900px) {
+            font-size: 1rem;
+          }
+          @media screen and (max-width: 300px) {
+            font-size: 0.75rem;
+          }
+          // special case for tablets
+          @media screen and (width: 768px) and (height: 1024px) {
+            font-size: 2.25rem;
+          }
+          @media screen and (width: 820px) and (height: 1180px) {
+            font-size: 2.25rem;
+          }
+          @media screen and (width: 1024px) and (height: 1366px) {
+            font-size: 2.25rem;
+          }
         }
         .hero-right-image {
           display: flex;
@@ -202,6 +251,23 @@ p {
               height: 200px;
               width: 200px;
             }
+            @media screen and (max-width: 900px) {
+              height: 150px;
+              width: 150px;
+            }
+            // special case for tablets
+            @media screen and (width: 768px) and (height: 1024px) {
+              height: 300px;
+              width: 300px;
+            }
+            @media screen and (width: 820px) and (height: 1180px) {
+              height: 300px;
+              width: 300px;
+            }
+            @media screen and (width: 1024px) and (height: 1366px) {
+              height: 300px;
+              width: 300px;
+            }
           }
           &.dark {
             &::before {
@@ -211,298 +277,64 @@ p {
         }
       }
     }
-    // .hero-content-container {
-    //   width: 100%;
-    //   height: 100%;
-    //   padding: 15%;
-    //   display: flex;
-    //   justify-content: center;
-    //   align-items: center;
-    //   color: $appleWhite;
-    //   font-family: 'Play', sans-serif;
-    //   // desktop responsiveness
-    //   // @media screen and (max-width: 1280px) {
-    //   //   padding: 20% 5%;
-    //   // }
-    //   // @media screen and (max-width: 1280px), (min-height: 800px) {
-    //   //   padding: 15% 10%;
-    //   // }
-    //   // @media screen and (min-height: 1024px) and (max-height: 1070px) {
-    //   //   padding: 25% 10% !important;
-    //   // }
-    //   @media screen and (max-width: 770px) {
-    //     flex-direction: column-reverse;
-    //   }
-    //   // ipads and tablets
-    //   @media screen and (width: 820px) and (height: 1180px), (width: 912px) and (height: 1368px) {
-    //     flex-direction: column-reverse;
-    //     padding: 25% 10%;
-    //   }
-    //   // mobile responsiveness
-    //   @media screen and (max-width: 450px) {
-    //     padding: 35% 10%;
-    //   }
-    //   @media screen and (max-height: 450px) {
-    //     padding: 15% 5% 5% 5%;
-    //   }
-    //   @media screen and (max-height: 375px) {
-    //     flex-direction: row;
-    //     padding: 18% 5% 8% 5%;
-    //   }
-    //   @media screen and (max-height: 320px) {
-    //     padding: 22% 5% 8% 5%;
-    //   }
-    //   .column {
-    //     display: flex;
-    //     flex: 1;
-    //     margin: 1%;
-    //     height: 100%;
-    //     position: relative;
-    //     overflow: hidden;
-    //     align-items: center;
-    //     justify-content: center;
-    //     @media screen and (max-width: 800px) {
-    //       width: 75%;
-    //     }
-    //     @media screen and (max-width: 450px) {
-    //       width: 100%;
-    //     }
-    //     // ipads and tablets
-    //     @media screen and (width: 820px) and (height: 1180px), (width: 912px) and (height: 1368px) {
-    //       width: 85%;
-    //     }
-    //   }
-    //   .hero-left {
-    //     flex-direction: column;
-    //     align-items: flex-start;
-    //     .hero-title {
-    //       font-size: 7rem;
-    //       white-space: nowrap;
-    //       overflow: hidden;
-    //       border-right: 4px solid $red;
-    //       // desktop responsiveness
-    //       @media screen and (max-width: 1800px) {
-    //         font-size: 6.3rem;
-    //       }
-    //       @media screen and (max-width: 1600px) {
-    //         font-size: 5.7rem;
-    //       }
-    //       @media screen and (max-width: 1450px) {
-    //         font-size: 5.3rem;
-    //       }
-    //       @media screen and (max-width: 1300px) {
-    //         font-size: 4.7rem;
-    //       }
-    //       @media screen and (max-width: 1200px) {
-    //         font-size: 4.4rem;
-    //       }
-    //       @media screen and (max-width: 1100px) {
-    //         text-align: center;
-    //         font-size: 3.8rem;
-    //       }
-    //       // mobile responsiveness
-    //       @media screen and (max-width: 450px) {
-    //         font-size: 3rem;
-    //       }
-    //       @media screen and (max-height: 450px) {
-    //         font-size: 3.5rem;
-    //       }
-    //       @media screen and (max-width: 375px), (max-height: 375px) {
-    //         font-size: 2.7rem;
-    //       }
-    //       @media screen and (max-width: 320px) {
-    //         font-size: 2.4rem;
-    //       }
-    //       @media screen and (max-height: 320px) {
-    //         font-size: 1.9rem;
-    //       }
-    //       @media screen and (max-width: 300px) {
-    //         font-size: 2rem;
-    //       }
-    //     }
-    //     .anim-typewriter {
-    //       animation: typewriter 2s steps(44) 1s 1 normal both,
-    //         blinkTextCursor 500ms steps(44) infinite normal;
-    //         &.dark {
-    //           animation: typewriter 2s steps(44) 1s 1 normal both,
-    //           blinkTextDarkCursor 500ms steps(44) infinite normal;
-    //         }
-    //       }
-    //     @keyframes typewriter {
-    //       from { width: 0; }
-    //       to { width: 100%; }
-    //     }
-    //     @keyframes blinkTextCursor {
-    //       from { border-right-color: $red; }
-    //       to { border-right-color: transparent; }
-    //     }
-    //     @keyframes blinkTextDarkCursor {
-    //       from { border-right-color: $blue; }
-    //       to { border-right-color: transparent; }
-    //     }
-    //     .hero-subtitle {
-    //       color: rgba(250, 250, 250, 0.8);
-    //       font-size: 3rem;
-    //       text-align: center;
-    //       letter-spacing: 0.15rem;
-    //       animation-name: fade-in;
-    //       animation-duration: 5s;
-    //       @keyframes fade-in{
-    //         0% { opacity: 0; }
-    //         60% { opacity: 0; }
-    //         100% { opacity: 1; }
-    //       }
-    //       // desktop responsiveness
-    //       @media screen and (max-width: 1800px) {
-    //         font-size: 2.5rem;
-    //       }
-    //       @media screen and (max-width: 1600px) {
-    //         font-size: 2.3rem;
-    //       }
-    //       @media screen and (max-width: 1450px) {
-    //         font-size: 2.1rem;
-    //       }
-    //       @media screen and (max-width: 1300px) {
-    //         font-size: 1.8rem;
-    //       }
-    //       // mobile responsiveness
-    //       @media screen and (max-height: 450px) {
-    //         font-size: 1.6rem;
-    //       }
-    //       @media screen and (max-width: 375px), (max-height: 375px) {
-    //         font-size: 1.5rem;
-    //       }
-    //       @media screen and (max-width: 320px) {
-    //         font-size: 1.2rem;
-    //       }
-    //       @media screen and (max-height: 320px) {
-    //         font-size: 1rem;
-    //       }
-    //     }
-    //   }
-    //   .hero-right {
-    //     background: $bubble;
-    //     border-radius: 8% 8%;
-    //     max-height: 500px;
-    //     min-height: 400px;
-    //     max-width: 40%;
-    //     &::before {
-    //       content: '';
-    //       position: absolute;
-    //       height: 50%;
-    //       width: 75%;
-    //       background: $pink;
-    //       border-radius: 1rem 1rem;
-    //       // mobile responsiveness
-    //       @media screen and (max-height: 450px) {
-    //         width: 65%;
-    //       }
-    //     }
-    //     &::after {
-    //       content: url("https://res.cloudinary.com/dnr41r1lq/image/upload/v1691605496/300__1_mi9t2u.png");
-    //       position: absolute;
-    //       transform: scale(1.2);
-    //       // desktop responsiveness
-    //       @media screen and (max-width: 1920px) and (max-height: 900px) {
-    //         transform: scale(0.9);
-    //       }
-    //       @media screen and (max-width: 1600px) {
-    //         transform: scale(1);
-    //       }
-    //       @media screen and (max-width: 1300px) {
-    //         transform: scale(0.8);
-    //       }
-    //       // mobile responsiveness
-    //       @media screen and (max-width: 450px) {
-    //         transform: scale(0.7);
-    //       }
-    //       @media screen and (max-height: 450px) {
-    //         transform: scale(0.6);
-    //       }
-    //       @media screen and (max-height: 375px), (max-width: 375px) {
-    //         transform: scale(0.5);
-    //       }
-    //       @media screen and (max-width: 320px) {
-    //         transform: scale(0.4);
-    //       }
-    //     }
-    //     &.dark {
-    //       &::before {
-    //         background: $purple;
-    //       }
-    //       &::after {
-    //         content: url("https://res.cloudinary.com/dnr41r1lq/image/upload/v1691888601/300_2_cinamx.png");
-    //       }
-    //     }
-    //   }
-    // }
   }
   // JUST THE RESUME BUTTON ON HERO SLANT
   .hero-btn {
     position: absolute;
-    left: 10%;
-    bottom: 3%;
-    height: 6.6rem;
-    width: 20rem;
+    left: 10rem;
+    bottom: 1rem;
+    padding: 2rem 4rem;
     border: 4px solid #5e253c;
     border-radius: 4rem 4rem;
     background: $buttonbg;
     color: $appleWhite;
-    font-size: 30px;
+    font-size: 40px;
     font-family: 'Jua', sans-serif;
     overflow: hidden;
-    // desktop responsiveness
-    @media screen and (max-height: 1180px) {
-      height: 6rem;
-      width: 16rem;
-      font-size: 28px;
+    @media screen and (max-width: 1600px) {
+      font-size: 30px;
     }
-    @media screen and (min-width: 1900px) {
-      height: 8rem;
-      width: 23rem;
-      font-size: 42px;
-    }
-    @media screen and (max-height: 770px) {
-      height: 5.5rem;
-      width: 16rem;
-    }
-    // ipads and tablets
-    @media screen and (max-width: 915px) {
-      left: 4%;
-      height: 6rem;
-      width: 16rem;
-    }
-    @media screen and (max-width: 600px), (max-device-width: 750px) {
-      height: 4rem;
-      width: 10rem;
-    }
-    // mobile responsiveness
-    @media screen and (max-width: 450px){
-      height: 3.5rem;
-      width: 9rem;
-      font-size: 20px;
-      left: 5%;
+    @media screen and (max-width: 1400px) {
+      padding: 1.5rem 3rem;
       border-width: 3px;
     }
-    @media screen and (max-height: 450px) {
-      height: 3rem;
-      width: 10rem;
-      left: 10%;
-      border-width: 3px;
-      font-size: 20px;
+    @media screen and (max-width: 1300px) {
+      left: 7rem;
     }
-    @media screen and (max-height: 375px) {
-      height: 2.5rem;
-      width: 8rem;
+    @media screen and (max-width: 1100px) {
+      font-size: 22px;
+      padding: 0.5rem 1.5rem;
+      bottom: 0.5rem;
+      border-width: 2px;
+      left: 4rem;
+    }
+    @media screen and (max-width: 500px) {
+      bottom: 1.5rem;
+      left: 1rem;
+    }
+    @media screen and (max-width: 350px) {
       font-size: 18px;
+      bottom: 1rem;
+      padding: 0.5rem 1.25rem;
     }
-    @media screen and (max-width: 320px){
-      height: 3rem;
-      width: 7rem;
-      font-size: 16px;
+    // special case for tablets
+    @media screen and (width: 768px) and (height: 1024px) {
+      font-size: 34px;
+      left: 2.5rem;
+      bottom: 2rem;
+      padding: 1rem 2rem;
     }
-    @media screen and (max-height: 320px) {
-      left: 5%;
+    @media screen and (width: 820px) and (height: 1180px) {
+      font-size: 34px;
+      left: 2.5rem;
+      bottom: 3rem;
+      padding: 1.5rem 3rem;
+    }
+    @media screen and (width: 1024px) and (height: 1366px) {
+      font-size: 36px;
+      left: 3rem;
+      bottom: 3rem;
+      padding: 2rem 4rem;
     }
     &.dark {
       border-color: #3E3744;
@@ -546,18 +378,16 @@ p {
     .hero-btn-icon {
       background: transparent;
       color: $appleWhite;
-      font-size: 28px;
-      margin-right: 15px;
-      @media screen and (max-width: 900px) {
+      font-size: 42px;
+      margin-right: 0.75rem;
+      @media screen and (max-width: 1600px) {
+        font-size: 32px;
+      }
+      @media screen and (max-width: 1100px) {
+        font-size: 24px;
+      }
+      @media screen and (max-width: 350px) {
         font-size: 20px;
-        margin-right: 10px;
-      }
-      @media screen and (max-width: 600px) {
-        font-size: 18px;
-        margin-right: 8px;
-      }
-      @media screen and (min-width: 1900px) {
-        font-size: 42px;
       }
     }
   }
