@@ -22,12 +22,12 @@ export default function TechStackItem({ section }) {
 
   switch(section) {
     case 'frontEnd':
-      techList = ['JavaScript', 'React', 'React Native', 'Html', 'CSS', 'Sass'];
-      imgList = ['js', 'react', 'reactnative', 'html', 'css', 'sass'];
+      techList = ['JavaScript', 'TypeScript', 'React', 'Next.js', 'Html', 'CSS'];
+      imgList = ['js', 'ts', 'react', 'next', 'html', 'css'];
       break;
     case 'backEnd':
-      techList = ['Node', 'Express', 'MongoDB', 'PostgreSQL', 'MySQL', 'SpringMVC'];
-      imgList = ['node', 'express', 'mongo', 'postgres', 'mysql', 'spring'];
+      techList = ['Node', 'NestJS', 'GraphQL', 'MongoDB', 'PostgreSQL', 'SpringMVC'];
+      imgList = ['node', 'nest', 'graphql', 'mongo', 'postgres', 'spring'];
       break;
     case 'devTools':
       techList = ['Jest', 'GitHub', 'Trello', 'AWS', 'Docker', 'Webpack'];

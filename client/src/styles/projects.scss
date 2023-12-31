@@ -42,7 +42,7 @@ $blue: #9b98ca;
     @media screen and (max-width: 770px) {
       clip-path: polygon(52% 0, 100% 0, 100% 7%, 62% 7%);
     }
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 570px) {
       clip-path: polygon(48% 0, 100% 0, 100% 3%, 62% 3%);
     }
     &::after {
@@ -107,7 +107,7 @@ $blue: #9b98ca;
     @media screen and (max-width: 770px) {
       clip-path: polygon(51% 0, 100% 0, 100% 8%, 62% 8%, 51% 0, 58% 1%, 64% 6%, 97% 6%, 97% 1%, 58% 1%);
     }
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 570px) {
       clip-path: polygon(42% 0, 100% 0, 100% 3%, 59% 3%, 42% 0, 50% 0.5%, 62% 2.5%, 97% 2.5%, 97% 0.5%, 50% 0.5%);
     }
     &.dark {
