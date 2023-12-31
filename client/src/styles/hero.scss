@@ -99,6 +99,10 @@ p {
       color: $appleWhite;
       font-family: 'Play', sans-serif;
       gap: 2.5rem;
+      @media screen and (max-width: 1100px) {
+        flex-direction: column-reverse;
+        gap: 1rem;
+      }
       .column {
         display: flex;
         flex-direction: column;
@@ -110,6 +114,9 @@ p {
           background: $bubble;
           border-radius: 2rem 2rem;
           padding: 4rem 8rem;
+          @media screen and (max-width: 1100px) {
+            padding: 2rem;
+          }
         }
         .hero-title {
           align-self: flex-start;
@@ -117,6 +124,15 @@ p {
           white-space: nowrap;
           overflow: hidden;
           border-right: 4px solid $red;
+          @media screen and (max-width: 1600px) {
+            font-size: 6rem;
+          }
+          @media screen and (max-width: 1400px) {
+            font-size: 5rem;
+          }
+          @media screen and (max-width: 1100px) {
+            font-size: 4rem;
+          }
         }
         .anim-typewriter {
           animation: typewriter 2s steps(44) 1s 1 normal both,
@@ -150,6 +166,15 @@ p {
             60% { opacity: 0; }
             100% { opacity: 1; }
           }
+          @media screen and (max-width: 1600px) {
+            font-size: 2.5rem;
+          }
+          @media screen and (max-width: 1400px) {
+            font-size: 2rem;
+          }
+          @media screen and (max-width: 1100px) {
+            font-size: 1.5rem;
+          }
         }
         .hero-right-image {
           display: flex;
@@ -164,7 +189,19 @@ p {
             border-radius: 1rem 1rem;
           }
           .hero-chibi {
-            z-index: 2,
+            z-index: 2;
+            @media screen and (max-width: 1600px) {
+              height: 275px;
+              width: 275px;
+            }
+            @media screen and (max-width: 1400px) {
+              height: 250px;
+              width: 250px;
+            }
+            @media screen and (max-width: 1100px) {
+              height: 200px;
+              width: 200px;
+            }
           }
           &.dark {
             &::before {
