@@ -145,7 +145,7 @@ $blue: #9b98ca;
             }
             &.dark {
               background-color: $blue;
-              a:hover {
+              &:hover {
                 color: $cardCharcoal;
                 cursor: pointer;
               }
