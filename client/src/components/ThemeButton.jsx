@@ -19,6 +19,7 @@ export default function ThemeButton() {
           value={checked}
           onChange={toggleDarkTheme}
           className={darkMode ? 'dark' : 'checkbox'}
+          ariaLabel="Toggle Dark Mode"
         />
       </div>
     </div>

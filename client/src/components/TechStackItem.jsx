@@ -57,7 +57,7 @@ export default function TechStackItem({ section }) {
         <div className="stack-items dark">
           <img src="https://res.cloudinary.com/dnr41r1lq/image/upload/v1691974395/purpleCurlyOpen_z2v3tb.png" alt="Open purple curly brace icon" />
           <span className="section-label dark">{`${section}: [`}</span>
-          {imgList.map((icon, i) => <img className="tech-icon" src={require(`../assets/dark/dark${icon}.png`)} key={i}/>)}
+          {imgList.map((icon, i) => <img className="tech-icon" src={require(`../assets/dark/dark${icon}.png`)} key={i} alt={`tech: ${icon}`}/>)}
           <span className="section-label dark">{']'}</span>
           <img src="https://res.cloudinary.com/dnr41r1lq/image/upload/v1691974392/purpleCurlyClose_dbeo5w.png" alt="Close purple curly brace icon" />
         </div>
@@ -65,7 +65,7 @@ export default function TechStackItem({ section }) {
         <div className="stack-items">
           <img src="https://res.cloudinary.com/dnr41r1lq/image/upload/v1691974389/redCurlyOpen_xkvc6w.png" alt="Open red curly brace icon" />
           <span className="section-label">{`${section}: [`}</span>
-          {imgList.map((icon, i) => <img className="tech-icon" src={require(`../assets/light/${icon}.png`)} key={i}/>)}
+          {imgList.map((icon, i) => <img className="tech-icon" src={require(`../assets/light/${icon}.png`)} key={i} alt={`tech: ${icon}`}/>)}
           <span className="section-label">{']'}</span>
           <img src="https://res.cloudinary.com/dnr41r1lq/image/upload/v1691974385/redCurlyClose_e0boks.png" alt="Close red curly brace icon" />
         </div>
