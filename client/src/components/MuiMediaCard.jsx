@@ -65,11 +65,23 @@ export default function MuiMediaCard({ project }) {
       </CardContent>
       <CardActions>
         <a href={project.github} target="blank">
-          <Button size="small" sx={{ color: darkMode ? "#9c7cac" : "#eda0c5", textDecoration: "underline" }}>Github</Button>
+          <Button
+            size="small"
+            sx={{ color: darkMode ? "#9c7cac" : "#eda0c5", textDecoration: "underline" }}
+            aria-label="Link to the project's GitHub repository"
+          >
+            Github
+          </Button>
         </a>
         {project.link &&
           <a href={project.link} target="blank">
-            <Button size="small" sx={{ color: darkMode ? "#9c7cac" : "#eda0c5", textDecoration: "underline" }}>Live Demo</Button>
+            <Button
+              size="small"
+              sx={{ color: darkMode ? "#9c7cac" : "#eda0c5", textDecoration: "underline" }}
+              aria-label="Link to the deployed app"
+            >
+              Live Demo
+            </Button>
           </a>
         }
       </CardActions>

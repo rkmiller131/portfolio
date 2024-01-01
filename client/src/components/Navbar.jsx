@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <header className={darkMode ? "nav-wrapper dark" : "nav-wrapper"}>
       <div className="navbar">
-        <a href="/" className={darkMode ? "logo dark" : "logo"} />
+        <a href="/" className={darkMode ? "logo dark" : "logo"} ariaLabel="Refresh, go back to the landing page"/>
         <div className="navigation-links">
           <NavMobile />
           <nav className={darkMode ? "navigation-desktop dark" : "navigation-desktop"}>
