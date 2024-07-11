@@ -33,15 +33,15 @@ export default function Projects() {
   const leftProjects = [
     {
       title: 'Paper Cat Games',
-      description: `A promotional website for an indie game studio. Recognized the client's need for autonomous content management without web development expertise, and proposed a bespoke CMS solution using React Bricks that empowered them with the flexibility to make real-time changes and add future content as the studio expands. Leveraged Next.js's dynamic routes to add new pages each time the admin creates a blog post.`,
+      description: `A custom Content Management System (CMS) designed for an indie game studio and made with React and CSS modules to create directly editable components and page layouts through an admin interface. Leveraged Next.js's dynamic routes to add new pages each time the admin creates a blog post.`,
       src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1702160880/PapercatAdminDemo_zaar0r.mp4',
       github: 'https://github.com/Paper-Studios/cms-papercat',
-      link: 'https://admirable-clafoutis-124804.netlify.app/',
+      link: 'https://papercatgames.com/',
       id: 198
     },
     {
       title: 'Styl Forge',
-      description: 'Translated UI wireframe design into a SPA, creating an innovative fractional 5-star rating system and product breakdown charts with vanilla CSS. Employed industry standard testing libraries such as Jest and RTL, achieving 80% code coverage for unit tests. Enabled photo uploads in URL format via externally hosted base64 data to address backend compatibility issues.',
+      description: 'Translated UI wireframe design into a SPA, creating a fractional 5-star rating system and product breakdown charts with vanilla CSS. Employed industry standard testing libraries such as Jest and RTL, achieving 80% code coverage for unit and integration tests. Enabled photo uploads in URL format via externally hosted base64 data to address backend compatibility issues.',
       src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1692139856/ShortenedFECDemo_vyagyn.mp4',
       github: 'https://github.com/CBC-Ecommerce/styl-forge',
       link: 'http://54.177.180.141:3000/',
@@ -73,7 +73,7 @@ export default function Projects() {
     },
     {
       title: 'OldSkool CFVanguard',
-      description: 'Developed the backend for a legacy playstyle card searching app. Harvested pertinent card IDs by extracting data from external API and utilized Mongock for an ETL process that object mapped relevant card information into a MongoDB. Employed scheduled annotation for front-end to fetch daily random cards at 9 a.m. PST while learning Java, SpringMVC, Mongock, and Unirest within 3 weeks.',
+      description: 'Wrote a script to generate a JSON file containing 1000+ card Ids and names categorized by deck release dates, sourced from a CardFight!! Vanguard API. Utilized this JSON data to access specific card details from an external API, implementing object mapping techniques to populate a MongoDB database. Employed scheduled annotation for the front-end to fetch daily random cards at 9 a.m. PST. Made in Java/Spring MVC.',
       src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1692131215/cfVanguardDemo_pyu7nq.mp4',
       github: 'https://github.com/oldskool-vg/oldskoolbackend',
       id: 123
