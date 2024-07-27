@@ -92,7 +92,7 @@ $blue: #9b98ca;
     clip-path: polygon(56% 0, 100% 0, 100% 8%, 65% 8%, 56% 0, 61% 1%, 66% 6%, 97% 6%, 97% 1%, 60% 1%);
     height: 100%;
     width: 100%;
-    margin: -2px;
+    margin-top: -2px;
     // desktop responsiveness
     @media screen and (max-width: 1280px) {
       clip-path: polygon(51% 0, 100% 0, 100% 8%, 62% 8%, 51% 0, 58% 1%, 64% 6%, 97% 6%, 97% 1%, 58% 1%);
@@ -136,7 +136,7 @@ $blue: #9b98ca;
     }
     .lefty {
       align-items: flex-end;
-      margin-top: -20%;
+      margin-top: -18%;
       padding-top: 10%;
       border-right: 8px solid $appleWhite;
       @media screen and (max-width: 900px) {

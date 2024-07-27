@@ -13,7 +13,7 @@ import './styles/hero.scss';
 export default function App() {
   return (
     <ThemeProvider>
-      <main>
+      <main className="main-app">
         <Hero />
         <TechStack />
         <Suspense fallback={null}>

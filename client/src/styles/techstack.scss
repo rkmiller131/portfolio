@@ -38,7 +38,7 @@ $purple: #9c7cac;
     flex-direction: column;
     justify-content: space-around;
     width: 100%;
-    padding: 4% 10% 10% 10%;
+    padding: 4% 15%;
     @media screen and (max-width: 320px) {
       padding: 4% 5% 10% 5%;
     }
@@ -150,6 +150,68 @@ $purple: #9c7cac;
       &.dark {
         background: #3E3744;
         border-color: $purple;
+      }
+    }
+  }
+  .industry-text {
+    margin: 0;
+    margin-bottom: 4%;
+    align-self: start;
+    padding-left: 10%;
+    color: $red;
+    font-family: 'Play', sans-serif;
+    font-size: 36px;
+    @media screen and (max-width: 450px) {
+      font-size: 24px;
+    }
+    @media screen and (max-width: 320px) {
+      font-size: 20px;
+    }
+    &.dark {
+      color: $appleWhite;
+    }
+  }
+  .industry-experience-container {
+    width: 100%;
+    padding: 0% 10% 6% 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    box-shadow: 0px 7px 7px 0 rgba(0,0,0,0.3);
+    .company-item-container {
+      padding: 1rem;
+      background: $pink;
+      border: 3px solid $red;
+      margin: 2%;
+      .company-logo {
+        width: 140px;
+        height: 140px;
+        background-size: cover;
+        @media screen and (max-width: 1400px) {
+          width: 90px;
+          height: 90px;
+        }
+        @media screen and (max-width: 900px) {
+          width: 50px;
+          height: 50px;
+        }
+      }
+      &:hover {
+        background: $red;
+        border-color: $pink;
+        cursor: pointer;
+      }
+      &.dark {
+        background: #3E3744;
+        border-color: $purple;
+        &:hover {
+          background: $purple;
+          border-color: $appleWhite;
+          cursor: pointer;
+        }
+      }
+      @media screen and (max-width: 900px) {
+        padding: 0.5rem;
       }
     }
   }
