@@ -44,16 +44,16 @@ export default function Projects() {
       description: 'Translated UI wireframe design into a SPA, creating a fractional 5-star rating system and product breakdown charts with vanilla CSS. Employed industry standard testing libraries such as Jest and RTL, achieving 80% code coverage for unit and integration tests. Enabled photo uploads in URL format via externally hosted base64 data to address backend compatibility issues.',
       src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1692139856/ShortenedFECDemo_vyagyn.mp4',
       github: 'https://github.com/CBC-Ecommerce/styl-forge',
-      link: 'http://54.177.180.141:3000/',
+      // link: 'http://54.177.180.141:3000/',
       id: 567
     },
-    // {
-    //   title: 'Village Sports',
-    //   description: 'A sports league meetup mobile app with React Native. Developed a Home Page carousel, weekly announcement feed and Wishlist feature, integrating Firebase authentication and Firestore database.',
-    //   src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1692151765/Untitled_video_ohhxpp.mp4',
-    //   github: 'https://github.com/Blue-Ocean-Naruto/Village-Sports',
-    //   id: 345
-    // }
+    {
+      title: 'Village Sports',
+      description: 'A sports league meetup mobile app with React Native. Developed a Home Page carousel, weekly announcement feed and Wishlist feature, integrating Firebase authentication and Firestore database.',
+      src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1692151765/Untitled_video_ohhxpp.mp4',
+      github: 'https://github.com/Blue-Ocean-Naruto/Village-Sports',
+      id: 345
+    },
     {
       title: 'Dog Age Calculator',
       description: `A fun app for converting a dog's age into the human equivalent using two different formulas (it's a little more than just the age times 7). Created over a holiday weekend using an accessible, mobile-first approach.`,
@@ -61,9 +61,17 @@ export default function Projects() {
       github: 'https://github.com/rkmiller131/dog-age-calculator',
       link: 'https://calculatedogage.netlify.app/',
       id: 7922
-    }
+    },
   ];
   const rightProjects = [
+    {
+      title: 'Discord Achievement Bot',
+      description: 'A social reward system for interacting with peers on a Discord server using Discord API Websockets, Node, and MongoDB. Unlock 15 different achievements over time and see community ranks with a "/leaderboard" command.',
+      src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1729171237/DiscordBotDemo_xhrjgu.mp4',
+      github: 'https://github.com/rkmiller131/achievement-bot',
+      link: 'https://discord.com/oauth2/authorize?client_id=1264779705685639261&scope=bot&permissions=311419989056',
+      id: 77774
+    },
     {
       title: 'WhimsiWorld',
       description: 'Pioneered the inception of a collaborative, turn-based creative writing platform for storytelling with friends using multimedia assets, community engagement, and competition. Created over 100 visual assets and story packs using Photoshop, Figma, generative AI, and styled the storyboard home page with React and Tailwind CSS to ensure a cohesive and engaging user experience.',
@@ -78,13 +86,13 @@ export default function Projects() {
       github: 'https://github.com/oldskool-vg/oldskoolbackend',
       id: 123
     },
-    {
-      title: 'LifeTrack Labs',
-      description: 'A minimum viable product (MVP) created in 2.5 days as a prototype for a blood lab interpretation app. A passion project that I want the world to have; an app that uses unbiased research to establish correlations between blood lab results and lifestyle choices. Open to collab? Contact me!',
-      src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1692147931/LifeTrackDemo_1_oepqcq.mp4',
-      github: 'https://github.com/rkmiller131/LifeTrack-Labs',
-      id: 789
-    }
+    // {
+    //   title: 'LifeTrack Labs',
+    //   description: 'A minimum viable product (MVP) created in 2.5 days as a prototype for a blood lab interpretation app. A passion project that I want the world to have; an app that uses unbiased research to establish correlations between blood lab results and lifestyle choices. Open to collab? Contact me!',
+    //   src: 'https://res.cloudinary.com/dnr41r1lq/video/upload/v1692147931/LifeTrackDemo_1_oepqcq.mp4',
+    //   github: 'https://github.com/rkmiller131/LifeTrack-Labs',
+    //   id: 789
+    // }
   ];
 
   return (
